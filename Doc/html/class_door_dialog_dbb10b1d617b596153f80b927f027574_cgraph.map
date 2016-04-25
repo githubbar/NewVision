@@ -1,0 +1,4 @@
+base referer
+rect $class_c_door_control.html#ab945cc655758be31e0bb4723dacc9cf 199,5 356,32
+rect $class_door_model.html#8cddb4bd953209c84eeb872f1b82a37f 203,56 352,83
+rect $class_camera_model.html#49d6322d38166628c966a915d9cad370 407,56 631,83

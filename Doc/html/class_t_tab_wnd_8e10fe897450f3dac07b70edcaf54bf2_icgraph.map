@@ -1,0 +1,6 @@
+base referer
+rect $class_t_tab_wnd.html#ba2d267f278af2761d4ea75c57790048 257,56 433,83
+rect $class_t_tab_wnd.html#8d03b4e180725e2614dd00d3b76e14cf 520,5 691,32
+rect $class_t_visual_framework.html#16e52201ae775874e0fd4abd71c76adb 483,56 728,83
+rect $class_t_visual_framework.html#3ff7c9243bd1b09c78a3bbeba7455231 495,107 716,133
+rect $class_t_visual_object.html#eac7085de66a47c76c61ea45dc9d12fb 776,107 971,133

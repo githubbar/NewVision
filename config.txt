@@ -1,0 +1,18 @@
+ <sectionGroup name="jnbridge">
+> 		   <section name="dotNetToJavaConfig"
+> 	
+>
+type="System.Configuration.SingleTagSectionHandler"/>
+> 		   <section name="javaToDotNetConfig"
+> 	
+>
+type="System.Configuration.SingleTagSectionHandler"/>
+> 		   <section name="tcpNoDelay"
+> 	
+>
+type="System.Configuration.SingleTagSectionHandler"/>
+> 		   <section name="javaSideDeclarations"
+> 	
+>
+type="System.Configuration.NameValueSectionHandler"/>
+> 	   </sectionGroup>

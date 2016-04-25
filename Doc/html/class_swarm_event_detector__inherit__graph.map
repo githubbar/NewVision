@@ -1,0 +1,7 @@
+base referer
+rect $class_co_dwelling_event_detector.html 5,757 200,885
+rect $class_grouping_event_detector.html 224,661 461,981
+rect $class_leader_following_event_detector.html 485,757 709,885
+rect $class_lining_up_event_detector.html 733,757 912,885
+rect $class_proximity_event_detector.html 936,725 1117,917
+rect $class_c_tab_page_s_s_l.html 507,5 688,325

@@ -1,0 +1,10 @@
+base referer
+rect $_std_afx_8h.html 580,5 652,32
+rect $_globals_8h.html 919,183 996,209
+rect $_editable_tooltip_8h.html 556,107 676,133
+rect $_new_vision_doc_8h.html 556,157 676,184
+rect $_body_path_8h.html 571,208 661,235
+rect $_floor_region_8h.html 564,259 668,285
+rect $_clustering_machine_8h.html 725,335 869,361
+rect $_swarm_event_8h.html 561,360 671,387
+rect $_swarm_activity_8h.html 557,411 675,437

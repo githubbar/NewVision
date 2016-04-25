@@ -1,0 +1,4 @@
+base referer
+rect $class_door_model.html 5,160 227,432
+rect $class_model.html 73,5 159,101
+rect $class_c_door_control.html 251,152 392,440

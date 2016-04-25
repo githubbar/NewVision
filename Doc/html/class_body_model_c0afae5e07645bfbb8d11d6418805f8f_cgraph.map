@@ -1,0 +1,7 @@
+base referer
+rect $class_obstacle_model.html#867aafeee30d90d9ae7f023eaf980b6c 237,5 443,32
+rect $class_body.html#668de1bd62956cbb2c1fdff32c7c4a31 267,56 413,83
+rect $class_floor_model.html#eb4b7e6af3a29c25419f3bf8ce9f401f 492,5 692,32
+rect $class_body.html#ccff71df59f80796ea8689922d9e5293 535,56 649,83
+rect $class_floor_model.html#2cbe4fa54e95583ffcb1530e1cc4fcbb 500,107 684,133
+rect $_globals_8cpp.html#8dbc3855d325a7c853bb8fd1607622e4 741,5 808,32

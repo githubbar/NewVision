@@ -1,0 +1,6 @@
+base referer
+rect $_std_afx_8h.html 600,5 669,32
+rect $_new_vision_8h.html 587,56 683,83
+rect $_blob_dialog_8h.html 587,107 683,133
+rect $_tracker_model_8h.html 577,157 692,184
+rect $_globals_8h.html 596,208 673,235

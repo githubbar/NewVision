@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"> 
+<HTML> 
+<HEAD> <META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252"> 
+<TITLE>Blob Model</TITLE> 
+</HEAD>  
+
+<BODY>  
+
+<P><A NAME="afx_hidd_blob_model"></A><B>Blob Model</B></P>  
+
+<P>
+Blobs are areas in the image deemed by the tracker to be corresponding to moving objects. Through the process of <STRONG>head candidate selection</STRONG> each blob is assigned one or more <STRONG>head candidates</STRONG> which are points at the top of the blobs representing a possible location of a person's head. Each head candidate has a corresponding <STRONG>foot candidate</STRONG> which is the location on the floor directly below the head.
+<P>
+<img src="Images/blobs.png">
+</P>
+</P>
+
+This dialog controls how blobs are created for your tracking project. 
+<P>
+<img src="Images/blob_model.png">
+</P>
+
+<P>
+<H4>1. Blob minimum area </H4>
+Blobs that occupy less than this percent of area of the image are discarded. For example: 0.01 = 1%. Increase this value to reduce the number of noise blobs.<BR>
+<STRONG>Default setting:</STRONG>0.001
+</P> 
+
+<P>
+<H4>2. Blob maximum area</H4>
+Blobs that occupy more than this percent of area of the image are discarded. For example: 0.2 = 20%. Typically such large blobs can appear if there was a global change in the scene, such as one of the lights shutting off.<BR>
+<STRONG>Default setting:</STRONG>0.3
+</P> 
+
+<P>
+<H4>3. Max bodies in blob</H4>
+One blobs can potentially correspond to more than one person. This value sets the upper limit of bodies in a single blob. Increase it for more crowded scenes.<BR>
+<STRONG>Default setting:</STRONG>3
+</P> 
+
+<P>
+<H4>4. Min ray size </H4>
+Minimum height of head candidates to be considered as the percentage of the height of the tallest head candidate.<BR>
+<STRONG>Default setting:</STRONG>0.6
+</P> 
+
+</BODY> </HTML> 

@@ -1,0 +1,4 @@
+base referer
+rect $class_camera_model.html 5,5 285,789
+rect $class_c_number_list_box.html 309,333 445,461
+rect $class_c_calibrate_control.html 469,237 616,557

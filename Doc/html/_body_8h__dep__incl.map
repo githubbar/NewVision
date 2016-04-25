@@ -1,0 +1,12 @@
+base referer
+rect $_body_model_8h.html 556,163 1065,189
+rect $_body_8cpp.html 1199,68 1684,95
+rect $_body_activity_model_8cpp.html 1159,144 1724,171
+rect $_body_mutations_8cpp.html 1169,207 1713,233
+rect $_tracker_model_8cpp.html 1172,264 1711,291
+rect $_body_cluster_8h.html 553,315 1068,341
+rect $_swarm_activity_detectors_8cpp.html 1143,340 1740,367
+rect $_body_path_cluster_8cpp.html 532,416 1089,443
+rect $_new_vision_doc_8cpp.html 540,467 1081,493
+rect $_new_vision_view_8cpp.html 537,517 1084,544
+rect $_persistant_formats_8cpp.html 528,568 1093,595

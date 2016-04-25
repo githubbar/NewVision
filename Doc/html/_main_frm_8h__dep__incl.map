@@ -1,0 +1,13 @@
+base referer
+rect $_floor_dialog_8cpp.html 591,5 1113,32
+rect $_main_frm_8cpp.html 597,56 1107,83
+rect $_new_vision_8cpp.html 592,107 1112,133
+rect $_new_vision_doc_8cpp.html 1204,183 1745,209
+rect $_tracks_8h.html 611,208 1093,235
+rect $_new_vision_view_8cpp.html 579,259 1125,285
+rect $_p_g_r_sequence_processor_8cpp.html 549,309 1155,336
+rect $sequenceprocessor_8cpp.html 565,360 1139,387
+rect $_tracker_dialog_8cpp.html 583,411 1121,437
+rect $_tracker_model_8cpp.html 583,461 1121,488
+rect $_tree_prop_sheet_8cpp.html 579,512 1125,539
+rect $_true_color_tool_bar_8cpp.html 571,563 1133,589

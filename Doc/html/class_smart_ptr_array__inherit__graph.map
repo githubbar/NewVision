@@ -1,0 +1,5 @@
+base referer
+rect $class_smart_ptr_array.html 5,424 163,648
+rect $class_smart_ptr_array.html 187,424 437,648
+rect $class_smart_ptr_array.html 461,424 648,648
+rect $class_c_array.html 247,5 377,85

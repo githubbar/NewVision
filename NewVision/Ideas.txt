@@ -1,0 +1,10 @@
+
+- IDEA: need third BG model, with manually picked time and space region
+- IDEA: if two bodies are traveling too close for too long => overcompensation of the blob => delelte one body
+- IDEA: AmEagle Perspectives:
+  = use door trackers info => improve tracking quality
+  = use 3D model from Steve => improve tracking quality
+  
+- READ: about mean-shift tracker:why it converges?
+- READ: on Bhattacharyya bound, coefficient
+

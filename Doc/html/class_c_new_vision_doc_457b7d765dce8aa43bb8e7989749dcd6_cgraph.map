@@ -1,0 +1,12 @@
+base referer
+rect $class_body_map.html#92952bba376e196862b0fd0f42845f97 307,56 453,83
+rect $class_tracking_data.html#75a271fcdaa04cfbaa3cb279e009c90d 295,107 465,133
+rect $class_c_text_entry_dlg.html#8681f53a6ebe40ca7dc4eaf64bdd129e 297,157 463,184
+rect $class_c_new_vision_doc.html#092d60a012b38753b35ccda21caf82b0 292,208 468,235
+rect $class_c_text_entry_dlg.html#1af0a292c82ac1f8c1865746f769fbef 305,259 455,285
+rect $class_c_new_vision_doc.html#97626811f8b2c9ab0789b1a9ca26f984 288,309 472,336
+rect $class_body_map.html#3a06106c08f18a16c32114aa5319c360 560,5 717,32
+rect $class_body_map.html#d86c89491dc201843090849d926a994e 580,56 697,83
+rect $class_body_path_map.html#0bbc2c3c9c59f88ba6473d483e15d562 545,107 732,133
+rect $class_sequence_processor.html#b3e434f81731343c28aa5ff18641f2ad 531,284 747,311
+rect $class_c_new_vision_doc.html#3cbef4f4abc95d87b09d572e8f2ded2e 520,335 757,361

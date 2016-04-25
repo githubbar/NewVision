@@ -1,0 +1,12 @@
+base referer
+rect $class_t_tab_wnd.html#e04c02a365d6e0f3b73c9f9ee5ff6b70 263,5 417,32
+rect $class_t_tab_wnd.html#ba2d267f278af2761d4ea75c57790048 252,56 428,83
+rect $class_t_tab_wnd.html#1be825d9dd781adfb55f4bb83f944139 272,107 408,133
+rect $class_t_tab_wnd.html#92253f49db65a9a1df10fe9380c1814d 257,157 423,184
+rect $class_t_tab_wnd.html#f1988ca189d57fcdbc4db80047e558a5 267,208 413,235
+rect $class_t_tab_wnd.html#8d03b4e180725e2614dd00d3b76e14cf 515,5 685,32
+rect $class_t_visual_framework.html#16e52201ae775874e0fd4abd71c76adb 477,56 723,83
+rect $class_t_visual_framework.html#3ff7c9243bd1b09c78a3bbeba7455231 489,107 711,133
+rect $class_t_visual_object.html#eac7085de66a47c76c61ea45dc9d12fb 771,107 965,133
+rect $class_t_visual_framework.html#92693b4183bff8d20e22463d480916c2 501,208 699,235
+rect $class_t_visual_object.html#2ff68b7e34712faf858ee46ccd06425f 783,208 953,235

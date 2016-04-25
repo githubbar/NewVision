@@ -1,0 +1,10 @@
+base referer
+rect $_tracker_dialog_8h.html 599,5 1124,32
+rect $_background_dialog_8cpp.html 579,56 1144,83
+rect $_blob_dialog_8cpp.html 601,107 1121,133
+rect $_body_dialog_8cpp.html 600,157 1123,184
+rect $_c_b_g_dialog_8cpp.html 600,208 1123,235
+rect $_c_blob_dialog_8cpp.html 596,259 1127,285
+rect $_c_body_dialog_8cpp.html 595,309 1128,336
+rect $_new_vision_view_8cpp.html 588,360 1135,387
+rect $_tracker_model_8cpp.html 592,411 1131,437

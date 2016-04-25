@@ -1,0 +1,5 @@
+base referer
+rect $class_floor_dialog.html#f3048d32c575c6e37ec14f4f65c16939 372,31 516,57
+rect $class_floor_model.html#a107f80b52e0cfd44651d4c6daffdc1b 567,5 748,32
+rect $class_c_floor_control.html#9855c042cc5ac97351e6b39e1796e8b9 577,56 737,83
+rect $class_camera_model.html#26943cb85699af14deb4e9867aecbf43 799,5 1023,32

@@ -1,0 +1,10 @@
+base referer
+rect $class_camera_model.html#6aab2a30442d2b3a489f2812451e38fc 340,5 596,32
+rect $class_c_obstacle_control.html#d0d1b7e6c2109a7313567708fddd51f0 372,56 564,83
+rect $class_cylinder.html#78659ae953781b3a665a6f95111a284c 353,107 583,133
+rect $class_cuboid.html#dda62042be5dc9175e014363c5632547 356,157 580,184
+rect $class_body.html#c4ceba80e7bcfbed0e0cd2e3b166557d 363,208 573,235
+rect $class_camera_dialog.html#b45beea3f15be74bbfd5e613d03ef24c 387,259 549,285
+rect $class_body_model.html#af292d8bcfb3edb1e05157350e0c1eef 693,208 816,235
+rect $class_camera_dialog.html#13a855702f51ae1277b152ac579fb622 645,259 864,285
+rect $class_c_new_vision_doc.html#ca60c74bbf9a5d876e99e0269e904ab6 668,309 841,336

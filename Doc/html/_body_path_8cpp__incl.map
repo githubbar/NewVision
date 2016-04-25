@@ -1,0 +1,7 @@
+base referer
+rect $_std_afx_8h.html 600,5 669,32
+rect $_globals_8h.html 596,56 673,83
+rect $_body_path_8h.html 589,107 680,133
+rect $_body_path_cluster_8h.html 568,157 701,184
+rect $_new_vision_doc_8h.html 575,208 695,235
+rect $_floor_region_8h.html 583,259 687,285

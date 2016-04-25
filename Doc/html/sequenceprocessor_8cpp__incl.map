@@ -1,0 +1,8 @@
+base referer
+rect $_std_afx_8h.html 668,5 740,32
+rect $_sequence_processor_8h.html 628,56 780,83
+rect $_filters_8h.html 669,107 739,133
+rect $_globals_8h.html 665,157 743,184
+rect $_new_vision_8h.html 656,208 752,235
+rect $_main_frm_8h.html 661,259 747,285
+rect $_new_vision_view_8h.html 641,309 767,336

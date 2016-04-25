@@ -1,0 +1,10 @@
+base referer
+rect $class_activity_data.html#c587a397220b3ffe5a873fb0a3f0f36f 280,107 464,133
+rect $class_activity_data.html#c42a25a8472d30c69074c7e08b88198a 296,56 448,83
+rect $_globals_8cpp.html#58cb14ab08c0cf83f37ed2762c3bae17 525,56 664,83
+rect $_globals_8cpp.html#03e63a807d4d9576d8096f344c7a0f53 521,5 668,32
+rect $_globals_8cpp.html#3ddd73bb5e0085e9caae76c5e8fa9db7 525,107 664,133
+rect $class_swarm_activity.html#8e22190c656637854f509652242a17b7 513,157 676,184
+rect $class_swarm_event.html#16af944ac8e3da81e058e0287b8334fc 517,208 672,235
+rect $class_c_progress_dlg.html#94195460597d3f6dfab8186c0c4496ed 725,107 912,133
+rect $_globals_8cpp.html#bf519ca750c62a1ae41705179bf5ea92 800,208 837,235

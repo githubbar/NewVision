@@ -1,0 +1,1302 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NewVision.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UNINSTALL           ICON                    "res\\Uninstall.ico"
+IDR_MAINFRAME           ICON                    "res\\NewVision.ico"
+IDI_MEN                 ICON                    "res\\people.ico"
+IDI_BALLS               ICON                    "res\\balls.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_NEWPROJECTBG        BITMAP                  "res\\Banner.bmp"
+IDR_FILE                BITMAP                  "res\\toolbar.bmp"
+IDB_TOOLBAR_TC          BITMAP                  "res\\toolbar_TC.bmp"
+IDB_TOOLBAR_GR          BITMAP                  "res\\toolbar_GR.bmp"
+IDB_TOOLBAR_TC_HOT      BITMAP                  "res\\toolbar_TC_hot.bmp"
+IDB_CUBOID              BITMAP                  "res\\cuboid.bmp"
+IDB_POLYHEDRON          BITMAP                  "res\\polyhedron.bmp"
+IDB_CYLINDER            BITMAP                  "res\\cylinder.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Project... (Ctrl-N)",    ID_FILE_NEW
+        MENUITEM "&Open Project... (Ctrl-O)",   ID_FILE_OPEN
+        MENUITEM "&Save Project (Ctrl-S)",      ID_FILE_SAVE
+        MENUITEM "Save Project &As ...",        ID_FILE_SAVE_AS
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Action"
+    BEGIN
+        MENUITEM "Play/Pause (Space)",          ID_PLAY
+        MENUITEM "Go To Frame (Ctrl-G)",        ID_GOTOFRAME
+        MENUITEM "Go To Time (Ctrl-T)",         ID_GOTOTIME
+        MENUITEM "Set playback rate (Ctrl-R)",  ID_SETPLAYBACKRATE
+        MENUITEM "&Stop",                       ID_STOP
+        MENUITEM "&Record",                     ID_RECORD
+        MENUITEM "Back 1 frame (<)",            ID_REW1
+        MENUITEM "Fwd 1 frame (>)",             ID_FFW1
+        MENUITEM "Back 5 frames (Shift+<)",     ID_REW5
+        MENUITEM "Fwd 5 frames (Shift+>)",      ID_FFW5
+        MENUITEM "Back 10 frames (Ctrl+<)",     ID_REW10
+        MENUITEM "Fwd 10 frames (Ctrl+>)",      ID_FFW10
+    END
+    POPUP "&Data"
+    BEGIN
+        POPUP "Save screen"
+        BEGIN
+            MENUITEM "Video view...",               ID_DATA_SAVEINPUTVIEW
+            MENUITEM "Scene view...",               ID_DATA_SAVEOUTPUTVIEW
+            MENUITEM "Activity view...",            ID_DATA_SAVEACTIVITYVIEW
+            MENUITEM "Floor view...",               ID_DATA_SAVEFLOORVIEW
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Load data"
+        BEGIN
+            MENUITEM "Activity (Ctrl-F3)",          ID_DATA_LOADACTIVITYDATA
+            MENUITEM "Tracking (Ctrl-F5)",          ID_DATA_LOADTRACKINGDATA
+            MENUITEM "Heat-map (Ctrl-F7)",          ID_DATA_LOADHEATMAPDATA
+        END
+        POPUP "&Save data"
+        BEGIN
+            MENUITEM "Activity (Ctrl-F4)",          ID_DATA_SAVEACTIVITYDATA
+            MENUITEM "Tracking (Ctrl-F6)",          ID_DATA_SAVETRACKINGDATA
+            MENUITEM "Heat-map (Ctrl-F8)",          ID_DATA_SAVEHEATMAPDATA
+        END
+        POPUP "Visualize data"
+        BEGIN
+            MENUITEM "Tracks",                      ID_VISUALIZEDATA_X3DROLLERCOASTER
+            MENUITEM "Aggregate Time Heatmap",      ID_VISUALIZEDATA_HEATMAP
+            MENUITEM "Dwell Time Heatmap",          ID_VISUALIZEDATA_DWELLHEATMAP
+            MENUITEM "Motion in 3D",                ID_VISUALIZEDATA_MOTION
+            MENUITEM "Time Tags",                   ID_VISUALIZEDATA_TIMETAGS
+        END
+        MENUITEM SEPARATOR
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Groups (F8)",                 ID_BODY_ADDTOGROUP
+        MENUITEM "Tracks (F9)",                 ID_VIEW_TRACKS
+        MENUITEM "Full Screen (Alt+Enter)",     ID_VIEW_FULLSCREEN
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Contents...",                 ID_HELP_FINDER
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "Activity"
+    BEGIN
+        MENUITEM "Detect Events",               ID_ACTIVITY_DETECTEVENTS
+        MENUITEM "Detect Groups",               ID_ACTIVITY_DETECTGROUPS
+        MENUITEM "Filter Groups",               ID_ACTIVITY_FILTERGROUPS
+        MENUITEM "Filter Groups 2",             ID_ACTIVITY_FILTERGROUPS2
+    END
+END
+
+IDR_MENU_DISPLAY MENU 
+BEGIN
+    POPUP "Video Panel"
+    BEGIN
+        MENUITEM "Input Image",                 ID_VIDEOPANEL_INPUTIMAGE
+        MENUITEM "Blobs",                       ID_VIDEOPANEL_BLOBS
+        MENUITEM "Bodies",                      ID_VIDEOPANEL_BODIES
+        MENUITEM "Body Orientations",           ID_VIDEOPANEL_ORIENTATIONS
+        MENUITEM "Body Heights",                ID_VIDEOPANEL_BODYHEIGHTS
+        MENUITEM "Blob Heights",                ID_VIDEOPANEL_BLOBHEIGHTS
+        MENUITEM SEPARATOR
+        MENUITEM "Time Stamp",                  ID_VIDEOPANEL_TIMESTAMP
+        MENUITEM "Doors",                       ID_VIDEOPANEL_DOORS
+        MENUITEM "Obstacles",                   ID_VIDEOPANEL_OBSTACLES
+    END
+    POPUP "Scene Panel"
+    BEGIN
+        MENUITEM "Background",                  ID_SCENEPANEL_BACKGROUND
+        MENUITEM "Z-buffer",                    ID_SCENEPANEL_Z
+        MENUITEM "Bodies",                      ID_SCENEPANEL_BODIES
+        MENUITEM "Blobs",                       ID_SCENEPANEL_BLOBS
+        MENUITEM "Groups",                      ID_SCENEPANEL_GROUPS
+        MENUITEM "Paths",                       ID_SCENEPANEL_PATHS
+        MENUITEM "Doors",                       ID_SCENEPANEL_DOORS
+        MENUITEM "Camera",                      ID_SCENEPANEL_CAMERA
+        MENUITEM "Histograms",                  ID_SCENEPANEL_HISTOGRAMS
+        MENUITEM "Distance plane",              ID_SCENEPANEL_DISTANCEPLANE
+    END
+    POPUP "Activity Panel"
+    BEGIN
+        MENUITEM "Bodies",                      ID_ACTIVITYPANEL_BODIES
+        MENUITEM "Sales Reps",                  ID_ACTIVITYPANEL_SALESREPS
+        MENUITEM "Dwelling Bodies",             ID_ACTIVITYPANEL_DWELLINGBODIES
+        MENUITEM SEPARATOR
+        MENUITEM "Group Activities",            ID_ACTIVITYPANEL_GROUPS
+    END
+    POPUP "&Floor Panel"
+    BEGIN
+        MENUITEM "Floormap",                    ID_FLOORPANEL_FLOORMAP
+        MENUITEM "Body Maps",                   ID_FLOORPANEL_BODYMAPS
+        MENUITEM "Body Paths",                  ID_FLOORPANEL_BODYPATHS
+        MENUITEM "Body Tracks",                 ID_FLOORPANEL_BODYTRACKS
+        MENUITEM "Heat Map",                    ID_FLOORPANEL_HEATMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Obstacles",                   ID_FLOORPANEL_OBSTACLES
+        MENUITEM "Zones",                       ID_FLOORPANEL_ZONES
+        MENUITEM SEPARATOR
+        MENUITEM "Time Stamp",                  ID_FLOORPANEL_TIMESTAMP
+    END
+END
+
+IDR_MENU_SETTINGS MENU 
+BEGIN
+    MENUITEM "&Project Preferences... (F12)", 33017
+    MENUITEM "NewVision Settings...",       ID_SETTINGS_NEWVISIONSETTINGS
+    MENUITEM SEPARATOR
+END
+
+IDR_MENU_BODY MENU 
+BEGIN
+    POPUP "Body"
+    BEGIN
+        MENUITEM "Edit Info...",                ID_BODY_EDITINFOID
+        MENUITEM "Add to Group...",             ID_BODY_ADDTOGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "Change id...",                ID_BODY_CHANGEID
+        MENUITEM "Merge...",                    ID_BODY_MERGEID
+        MENUITEM "Append...",                   ID_BODY_APPENDID
+        MENUITEM SEPARATOR
+        MENUITEM "Delete track",                ID_BODY_DELETE
+        MENUITEM "Discontinue track",           ID_BODY_TERMINATE
+        MENUITEM SEPARATOR
+        MENUITEM "Set As Default",              ID_BODY_SETASDEFAULT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F8,          ID_BODY_ADDTOGROUP,     VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          ID_DATA_LOADACTIVITYDATA, VIRTKEY, CONTROL, NOINVERT
+    VK_F7,          ID_DATA_LOADHEATMAPDATA, VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          ID_DATA_LOADTRACKINGDATA, VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          ID_DATA_SAVEACTIVITYDATA, VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          ID_DATA_SAVEHEATMAPDATA, VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_DATA_SAVETRACKINGDATA, VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_FFW1,                VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_FFW10,               VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_FFW5,                VIRTKEY, SHIFT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_GOTOFRAME,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_GOTOTIME,            VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_ESCAPE,      ID_PAUSE,               VIRTKEY, NOINVERT
+    VK_SPACE,       ID_PLAY,                VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_REW1,                VIRTKEY, NOINVERT
+    VK_LEFT,        ID_REW10,               VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_REW5,                VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_SETPLAYBACKRATE,     VIRTKEY, CONTROL, NOINVERT
+    VK_F12,         ID_SETTINGS_NEWVISIONSETTINGS, VIRTKEY, CONTROL, NOINVERT
+    VK_F12,         ID_SETTINGS_PARAMETERS, VIRTKEY, NOINVERT
+    VK_RETURN,      ID_VIEW_FULLSCREEN,     VIRTKEY, ALT, NOINVERT
+    VK_F9,          ID_VIEW_TRACKS,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 184, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Progress"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,127,43,50,14
+    LTEXT           "",IDC_PROGRESS_TEXT,7,7,170,8
+    CONTROL         "1",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,22,170,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 247, 91
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About New Vision"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,31,20,20
+    LTEXT           "Version XXX",IDC_NEWVISIONVERSION,42,7,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004-2008",IDC_STATIC,42,46,119,8
+    DEFPUSHBUTTON   "OK",IDOK,190,36,50,16,WS_GROUP
+    LTEXT           "Alex Leykin and Raymond R. Burke @ CIL",IDC_HYPERLINK,41,62,116,10
+    LTEXT           "Built on",IDC_NEWVISIONBUILDDATETIME,42,22,119,8,SS_NOPREFIX
+END
+
+IDD_BLOBDIALOG DIALOGEX 0, 0, 261, 211
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Tracking::Blobs"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MINIMUMAREA,183,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXIMUMAREA,183,38,40,14,ES_AUTOHSCROLL
+    LTEXT           "Blob Minimum Area (% of the image)",IDC_STATIC,15,23,117,8
+    LTEXT           "Blob Maximum Area (% of the image)",IDC_STATIC,15,41,120,8
+    LTEXT           " ",IDC_STATIC,15,55,8,8
+    EDITTEXT        IDC_MAXBODIES,183,56,40,14,ES_AUTOHSCROLL
+    LTEXT           "Max bodies in blob",IDC_STATIC,15,59,60,8
+    EDITTEXT        IDC_MINRAYSIZE,183,74,40,14,ES_AUTOHSCROLL
+    LTEXT           "Min ray size (% of the longest ray)",IDC_STATIC,15,77,112,8
+END
+
+IDD_BACKGROUNDDIALOG DIALOGEX 0, 0, 617, 222
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Tracking::Background"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CDMAX,128,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BDMIN,128,50,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BDMAX,128,76,40,14,ES_AUTOHSCROLL
+    CONTROL         "Use learning phase",IDC_RADIOLEARNING,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,124,134,77,10
+    CONTROL         "Acquire dynamically",IDC_RADIODYNAMIC,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,124,156,79,10
+    PUSHBUTTON      "Reset Background",IDC_RESET,126,176,82,14
+    CONTROL         "Erode",IDC_ERODE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_TABSTOP,451,37,45,10
+    EDITTEXT        IDC_ERODESIZE,561,36,40,14,ES_AUTOHSCROLL
+    CONTROL         "Dilate",IDC_DILATE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_TABSTOP,452,66,44,10
+    EDITTEXT        IDC_DILATESIZE,561,65,40,14,ES_AUTOHSCROLL
+    CONTROL         "Initialize for (sec)",IDC_TEXTLEARNING1,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,233,134,56,8
+    EDITTEXT        IDC_INITFORNFRAMES,305,131,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TRACKAFTERAGE,272,170,32,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_STALECUTOFF,563,117,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CLEANSTALEEVERY,563,137,40,13,ES_AUTOHSCROLL
+    LTEXT           "Chromaticity distortion threshold",IDC_STATIC,20,25,105,8
+    LTEXT           "Minimum brightness distortion",IDC_STATIC,20,51,95,8
+    LTEXT           "Maximum brightness distortion",IDC_STATIC,20,77,98,8
+    GROUPBOX        "Morphological post-processing",IDC_STATIC,436,16,174,83
+    LTEXT           "Kernel size (px)",IDC_STATIC,502,38,50,14
+    LTEXT           "Kernel size (px)",IDC_STATIC,503,67,50,14
+    LTEXT           "Remove stale every (sec)",IDC_STATIC,451,138,91,11,0,0,HIDC_STATIC
+    GROUPBOX        "Stale codewords removal",IDC_STATIC,435,104,175,97
+    GROUPBOX        " Learn background ",IDC_STATIC,118,120,250,81
+    LTEXT           "Stale if didn't appear for (sec)",IDC_STATIC,449,119,96,8
+    LTEXT           "Start tracking if",IDC_TEXTDYN1,216,156,50,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_TRACKAFTERPERCENTAGE,268,153,26,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "% of codewords",IDC_TEXTDYN2,296,156,54,8,NOT WS_VISIBLE
+    LTEXT           "occurred in",IDC_TEXTDYN3,229,173,36,8,NOT WS_VISIBLE
+    LTEXT           "BG pixel, if occurred in (frames)",IDC_STATIC,451,157,102,8
+    EDITTEXT        IDC_MINAGE,563,155,40,13,ES_AUTOHSCROLL
+    LTEXT           "Update every (frames)",IDC_STATIC,451,177,74,8
+    EDITTEXT        IDC_UPDATEFREQ,563,174,40,13,ES_AUTOHSCROLL
+    GROUPBOX        "RGB Sensitivity",IDC_STATIC,7,7,178,96
+    LTEXT           "frames",IDC_TEXTDYN4,313,173,23,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_THERMALMIN,314,50,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_THERMALMAX,314,74,40,14,ES_AUTOHSCROLL
+    LTEXT           "Min thermal  deviation (1 to 255)",IDC_STATIC,204,51,105,8
+    LTEXT           "Max thermal  deviation (1 to 255)",IDC_STATIC,203,77,108,8
+    GROUPBOX        "Thermal Sensitivity",IDC_STATIC,191,7,178,96
+    EDITTEXT        IDC_BGSENSITIVITY,61,123,32,14,ES_AUTOHSCROLL
+    LTEXT           "Sensitivity",IDC_STATIC,18,125,34,8
+END
+
+IDD_BODYDIALOG DIALOGEX 0, 0, 495, 248
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Tracking::Bodies"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_BODYTAB,"SysTabControl32",0x0,7,7,481,234
+END
+
+IDD_TRACKER DIALOGEX 0, 0, 437, 209
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Input Source"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Color",IDC_RADIOFILE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,23,17,33,10
+    CONTROL         "Camera",IDC_RADIOCAMERA,"Button",BS_AUTORADIOBUTTON,23,45,41,10
+    CONTROL         "Color and Thermal",IDC_RADIOTHERMALCOLORPAIR,"Button",BS_AUTORADIOBUTTON,23,31,74,10
+    CONTROL         "PGR File",IDC_RADIOPGRFILE,"Button",BS_AUTORADIOBUTTON,23,59,42,10
+    EDITTEXT        IDC_SOURCENAME,111,27,239,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_SOURCESELECTBUTTON,356,27,32,14
+    EDITTEXT        IDC_FRAMESTART,95,125,58,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FRAMESTOP,95,144,58,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STARTTIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,254,79,100,15
+    CONTROL         "",IDC_STARTDATE,"SysMonthCal32",MCS_NOTODAY | MCS_NOTODAYCIRCLE | WS_TABSTOP,214,99,140,100
+    GROUPBOX        " Select input source ",IDC_STATIC,15,7,404,68,WS_GROUP
+    LTEXT           "Start (frame)",IDC_STATIC,37,127,43,8
+    LTEXT           "Start time",IDC_STATIC,215,82,32,8
+    LTEXT           "Stop (frame)",IDC_STATIC,37,146,42,8
+    EDITTEXT        IDC_SOURCENAMET,111,46,239,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_SOURCESELECTBUTTONT,356,46,32,14
+END
+
+IDD_FINISH DIALOGEX 0, 0, 235, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Finish"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+END
+
+IDD_DOORDIALOG DIALOGEX 0, 0, 983, 553
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Doors"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Remove all",IDC_BUTTONDOORREMOVE,894,54,50,14
+    CONTROL         "",IDC_DOORIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,7,845,527,WS_EX_STATICEDGE
+    SCROLLBAR       IDC_DOOR_SCROLLBAR1,852,7,11,524,SBS_VERT
+    SCROLLBAR       IDC_DOOR_SCROLLBAR2,7,532,844,11
+    GROUPBOX        " Door Model Type ",IDC_STATIC,874,78,92,113
+    CONTROL         "Uniform (no doors)",IDC_DOORS_UNIFORM,"Button",BS_AUTORADIOBUTTON | WS_GROUP,880,94,76,10
+    CONTROL         "Points",IDC_DOORS_POINTS,"Button",BS_AUTORADIOBUTTON,880,115,35,10
+    CONTROL         "Interest region",IDC_DOORS_INTEREST_REGION,"Button",BS_AUTORADIOBUTTON,880,134,64,10
+    CONTROL         "Interest boundary",IDC_DOORS_INTEREST_BOUNDARY,"Button",BS_AUTORADIOBUTTON,880,153,75,10
+    CONTROL         "Counter",IDC_DOORS_COUNTER,"Button",BS_AUTORADIOBUTTON,881,174,42,10
+END
+
+IDD_MYPROPERTYPAGE DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,26,50,16
+END
+
+IDD_CALIBRATEDIALOG DIALOGEX 0, 0, 1129, 578
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Camera"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Monoscopic",IDC_CAMERA_MONO,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,911,25,53,10
+    CONTROL         "Panoramic",IDC_CAMERA_PANO,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,964,25,49,10
+    CONTROL         "XML File",IDC_CAMERA_XML_FILE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,1013,25,41,10
+    CONTROL         "",IDC_IMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,9,846,527,WS_EX_STATICEDGE
+    PUSHBUTTON      "Reset",IDC_BUTTONRESET,899,151,50,14
+    PUSHBUTTON      "Add",IDC_BUTTONADD,1017,67,41,12
+    PUSHBUTTON      "Delete",IDC_BUTTONDELETE,1017,82,41,12
+    LISTBOX         IDC_HEIGHTS,907,83,93,55,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CURRENTHEIGHT,907,67,93,14,ES_AUTOHSCROLL
+    GROUPBOX        "Reference heights",IDC_STATIC1,900,56,169,89
+    SCROLLBAR       IDC_CAMERA_SCROLLBAR1,852,7,11,527,SBS_VERT
+    SCROLLBAR       IDC_CAMERA_SCROLLBAR2,7,535,843,11
+    GROUPBOX        " Camera Type ",IDC_STATIC,899,10,170,37
+    GROUPBOX        " Panoramic camera parameters ",IDC_STATIC3,17,7,201,148
+    EDITTEXT        IDC_ELEVATION,142,33,26,13,ES_AUTOHSCROLL
+    LTEXT           "Elevation (cm)",IDC_STATIC4,26,35,51,11
+    LTEXT           "Important: Calibration lines for VX, VY, VZ must be pointing toward the vanishing points, not away from them!",IDC_HELPTEXT,7,547,203,22
+    PUSHBUTTON      "Delete all",IDC_BUTTONDELETEALL,1017,97,41,12
+    PUSHBUTTON      "Browse...",IDC_BUTTON_BROWSE_XML_FILE,992,277,50,14
+    GROUPBOX        "Calibration File",IDC_STATIC_XML_FILE,903,191,206,122
+    EDITTEXT        IDC_EDIT_XML_FILE,913,218,185,14,ES_AUTOHSCROLL
+END
+
+IDD_SELECTCAMERA DIALOGEX 0, 0, 314, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,29,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,29,50,14
+    COMBOBOX        IDC_COMBOCAMERANAME,22,8,265,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FLOORDIALOG DIALOGEX 0, 0, 1043, 569
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Floor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Remove all",IDC_BUTTONFLOORREMOVE,931,50,50,14
+    CONTROL         "",IDC_FLOORIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,7,846,527,WS_EX_STATICEDGE
+    LTEXT           "Select extreme points to be included into the floor model",IDC_STATIC,7,545,198,17
+    CONTROL         "Image",IDC_RADIOFLOORIMAGE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP,913,85,36,10
+    CONTROL         "CAD model",IDC_RADIOFLOORCAD,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,957,85,51,10
+    PUSHBUTTON      "...",IDC_FLOORMODELSELECTBUTTON,987,105,32,14
+    GROUPBOX        "Select floor model ",IDC_STATIC,873,69,155,110
+    SCROLLBAR       IDC_FLOOR_SCROLLBAR1,852,7,11,525,SBS_VERT
+    SCROLLBAR       IDC_FLOOR_SCROLLBAR2,7,532,844,10
+    LTEXT           "Floor size",IDC_STATIC,885,140,31,8
+    EDITTEXT        IDC_FLOORW,919,138,28,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FLOORH,965,138,28,13,ES_AUTOHSCROLL
+    LTEXT           "X",IDC_STATIC,955,140,8,8
+    LTEXT           "pixels",IDC_STATIC,999,140,19,8
+    EDITTEXT        IDC_FLOORNAME,889,105,94,14,ES_AUTOHSCROLL
+END
+
+IDD_OBSTACLEDIALOG DIALOGEX 0, 0, 947, 553
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Obstacles"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Remove all",IDC_BUTTONOBSTACLEREMOVE,869,18,50,14
+    CONTROL         "",IDC_OBSTACLEIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,7,846,527,WS_EX_STATICEDGE
+    SCROLLBAR       IDC_OBSTACLE_SCROLLBAR1,852,7,11,523,SBS_VERT
+    SCROLLBAR       IDC_OBSTACLE_SCROLLBAR2,7,535,844,11
+    CONTROL         "Cuboid",IDC_CUBOID,"Button",BS_AUTORADIOBUTTON | BS_BITMAP | BS_PUSHLIKE | WS_GROUP,871,41,45,33
+    CONTROL         "Polyhedron",IDC_POLYHEDRON,"Button",BS_AUTORADIOBUTTON | BS_BITMAP | BS_PUSHLIKE,871,79,45,33
+    CONTROL         "Cylinder",IDC_CYLINDER,"Button",BS_AUTORADIOBUTTON | BS_BITMAP | BS_PUSHLIKE,871,117,45,33
+    CONTROL         "Frame View",IDC_FRAME_VIEW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,871,159,53,10
+    CONTROL         "Floor View",IDC_FLOOR_VIEW,"Button",BS_AUTORADIOBUTTON,871,173,49,10
+END
+
+IDD_TRACKTOOLBAR DIALOGEX 0, 0, 250, 30
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    SCROLLBAR       ID_SCROLLER,7,10,166,9
+    LTEXT           "Static",ID_POSITION,177,10,66,15
+END
+
+IDD_SKINDIALOG DIALOGEX 0, 0, 1005, 551
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Skin Color"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Clear",IDC_BUTTONCLEAR,902,52,50,14
+    CONTROL         "",IDC_SKINIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,7,846,527,WS_EX_STATICEDGE
+    SCROLLBAR       IDC_SKIN_SCROLLBAR1,852,7,11,525,SBS_VERT
+    SCROLLBAR       IDC_SKIN_SCROLLBAR2,7,532,845,11
+    GROUPBOX        "Skin Model Type ",IDC_STATIC,902,74,76,27
+    CONTROL         "2D Histogram",IDC_SKIN_2DHISTORGAM,"Button",BS_AUTORADIOBUTTON | WS_GROUP,909,85,59,10
+    CONTROL         "",IDC_HISTOGRAMIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,878,114,101,93,WS_EX_STATICEDGE
+    CONTROL         "",IDC_COLORIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,878,80,21,19,WS_EX_STATICEDGE
+END
+
+IDD_BODYACTIVITYDIALOG DIALOGEX 0, 0, 455, 216
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Activity Recognition::Individual"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PATHSMOOTHSIGMA,160,82,40,14,ES_AUTOHSCROLL
+    LTEXT           "Smooth paths by (sec)",IDC_STATIC,28,83,75,15
+    GROUPBOX        " Histogram-based pedestrian type detection ",IDC_STATIC,7,4,228,50
+    EDITTEXT        IDC_SALESREPTHRESHOLD,160,24,40,14,ES_AUTOHSCROLL
+    LTEXT           "Sales rep. histogram correlation",IDC_STATIC,28,26,118,13
+    GROUPBOX        " Pedestrian path post processing",IDC_STATIC,7,59,227,58
+    EDITTEXT        IDC_DWELLTIME,375,21,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DWELLAREARADIUS,375,36,40,14,ES_AUTOHSCROLL
+    LTEXT           "Dwell time (sec)",IDC_STATIC,263,24,75,15
+    LTEXT           "Dwell area (cm)",IDC_STATIC,263,40,75,15
+    GROUPBOX        " Dwelling pedestrian detection ",IDC_STATIC,248,4,189,61
+END
+
+IDD_RECORD_DIALOG DIALOGEX 0, 0, 241, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Record Video Output"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Record",IDOK,161,40,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,59,50,14
+    CONTROL         "Record Video View",IDC_RECORD_INPUT_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,30,75,10
+    CONTROL         "Record Scene View",IDC_RECORD_OUTPUT_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,44,80,10
+    CONTROL         "Record Activity View",IDC_RECORD_ACTIVITY_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,72,75,10
+    CONTROL         "Record Floor View",IDC_RECORD_FLOOR_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,58,73,10
+    GROUPBOX        " Recording Options ",IDC_STATIC,19,18,117,70
+END
+
+IDD_CONTROL_TOOLBAR DIALOGEX 0, 0, 198, 27
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Tracking",IDC_TRACKING_MODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,10,7,43,10
+    CONTROL         "Heat-map",IDC_HEATMAP_MODE,"Button",BS_AUTORADIOBUTTON,53,7,47,10
+    CONTROL         "Activity",IDC_ACTIVITY_MODE,"Button",BS_AUTORADIOBUTTON,100,7,40,10
+    CONTROL         "Playback",IDC_PLAYBACK_MODE,"Button",BS_AUTORADIOBUTTON,140,7,44,10
+END
+
+IDD_MESSAGEDIALOG DIALOGEX 0, 0, 503, 201
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Debug::Messages"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_MESSAGES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,395,187
+    PUSHBUTTON      "Clear",IDC_BUTTONMESSAGEREMOVE,429,25,50,14
+    PUSHBUTTON      "Save Graph ...",IDC_SAVE_FILTER_GRAPH,424,61,62,14
+END
+
+IDD_SWARMACTIVITYDIALOG DIALOGEX 0, 0, 625, 297
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Activity Recognition::Group"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SWARMACTIVITYTAB,"SysTabControl32",0x0,7,46,611,244
+    CONTROL         "Proximity",IDC_PROXIMITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,19,44,13
+    CONTROL         "Grouping",IDC_GROUPING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,19,44,13
+    CONTROL         "Leader Following",IDC_LEADERFOLLOWING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,19,66,13
+    CONTROL         "Lining up",IDC_LININGUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,19,41,13
+    CONTROL         "Co-dwelling",IDC_CODWELLING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,293,19,53,13
+    GROUPBOX        " Detect the following activities ",IDC_STATIC,7,7,365,32
+END
+
+IDDS_PROXIMITYEVENTDETECTOR DIALOGEX 0, 0, 509, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PROXIMITYDISTANCETHRESHOLD,169,20,40,14,ES_AUTOHSCROLL
+    LTEXT           "Group is closer than (cm)",-1,19,22,87,14
+    EDITTEXT        IDC_PROXIMITYMATUREPATH,169,35,40,14,ES_AUTOHSCROLL
+    LTEXT           "Path mature if longer than (frames)",-1,19,37,146,14
+    LTEXT           "Compare within +/- (frames)",-1,19,52,146,14
+    EDITTEXT        IDC_PROXIMITYEVERYNFRAME,169,65,40,14,ES_AUTOHSCROLL
+    LTEXT           "Sample every (frames)",-1,19,67,144,14
+    EDITTEXT        IDC_PROXIMITYTIMEDELTA,169,50,40,14,ES_AUTOHSCROLL
+END
+
+IDDS_GROUPINGEVENTDETECTOR DIALOGEX 0, 0, 507, 229
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_GROUPINGDWELLW,149,26,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGALIGNMENTW,149,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGCOHESIONW,149,56,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGGROUPRADIUS,149,71,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGEVERYNFRAME,149,86,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGEVENTSBEFOREFAME,411,26,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGMINEVENTWEIGHT,411,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGMINACTORWEIGHT,411,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGMINNODECARDINALITY,411,88,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGMAXCLUSTERS,411,105,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINGITERATION0,421,167,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUPINMINCARDINALITY,421,182,40,14,ES_AUTOHSCROLL
+    LTEXT           "Sample every (frames)",IDC_STATIC,35,87,74,8
+    LTEXT           "Max radius of a group (cm)",IDC_STATIC,35,72,87,8
+    LTEXT           "Cohesion weight",IDC_STATIC,35,57,54,8
+    LTEXT           "Alignment weight",IDC_STATIC,35,42,56,8
+    LTEXT           "Dwell weight",IDC_STATIC,35,27,41,8
+    GROUPBOX        " Detect Events ",IDC_STATIC,7,7,237,215
+    GROUPBOX        " Detect Activities ",IDC_STATIC,260,7,240,215
+    LTEXT           "Slow down after iteration",IDC_STATIC,291,170,87,8
+    LTEXT           "Number of initial clusters",IDC_STATIC,297,108,89,8
+    LTEXT           "Use events before frame",IDC_STATIC,297,27,106,8
+    LTEXT           "Min event weight in cluster",IDC_STATIC,297,43,106,8
+    LTEXT           "Min actor weight in cluster",IDC_STATIC,297,59,106,8
+    LTEXT           "Kill cluster if cardinality less than (0..1)",IDC_STATIC,291,186,124,8
+    EDITTEXT        IDC_GROUPINAGGLOMERATIONSPEED,422,197,40,14,ES_AUTOHSCROLL
+    LTEXT           "Agglomeration speed",IDC_STATIC,292,200,113,8
+    EDITTEXT        IDC_GROUPINGMAXOBJECTIVEFUNCTIONDELTA,411,137,40,14,ES_AUTOHSCROLL
+    LTEXT           "Stop if objective changes less than",IDC_STATIC,297,138,109,8
+    LTEXT           "Max iterations",IDC_STATIC,297,122,56,8
+    GROUPBOX        " Initialization and Stop",IDC_STATIC,277,77,194,82
+    LTEXT           "Create initial cluster for events repeating N times ",IDC_STATIC,297,88,113,16
+    EDITTEXT        IDC_GROUPINGMAXITERATIONS,411,121,40,14,ES_AUTOHSCROLL
+END
+
+IDDS_LEADERFOLLOWINGEVENTDETECTOR DIALOGEX 0, 0, 509, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Leader following",IDC_STATIC,46,31,110,13
+END
+
+IDDS_LININGUPEVENTDETECTOR DIALOGEX 0, 0, 509, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Lining up",IDC_STATIC,46,31,110,13
+END
+
+IDDS_CODWELLINGEVENTDETECTOR DIALOGEX 0, 0, 509, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Co-dwelling",IDC_STATIC,46,31,110,13
+END
+
+IDD_BLENDTOOLBAR DIALOGEX 0, 0, 89, 27
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",ID_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,7,75,13
+END
+
+IDD_ZONEDIALOG DIALOGEX 0, 0, 856, 514
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracking::Interest Zones"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_ZONEIMAGE,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,7,7,730,488,WS_EX_STATICEDGE
+    SCROLLBAR       IDC_ZONE_SCROLLBAR2,7,496,729,11
+    SCROLLBAR       IDC_ZONE_SCROLLBAR1,739,7,11,488,SBS_VERT
+    CONTROL         "Create New!",IDC_BUTTONZONENEW,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,762,159,68,24
+    PUSHBUTTON      "Create from obstacles",IDC_BUTTONZONEFROMOBSTACLE,756,191,79,14
+    PUSHBUTTON      "Remove all",IDC_BUTTONZONEREMOVE,756,214,79,14
+    CONTROL         "Frame View",IDC_ZONE_FRAME_VIEW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,768,257,53,10
+    CONTROL         "Floor View",IDC_ZONE_FLOOR_VIEW,"Button",BS_AUTORADIOBUTTON,768,271,49,10
+END
+
+IDDS_BODYTRACKINGTAB DIALOGEX 0, 0, 509, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DOORDISTANCE,97,15,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DISTANCECONFIDENCE,221,15,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INVISIBLEFOR,125,31,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DORMANTFOR,203,31,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTSIDERFOR,153,44,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSMODELNOISE,91,60,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POSMEASUREMENTNOISE,225,60,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ORIENTMODELNOISE,91,79,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ORIENTMEASUREMENTNOISE,225,79,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ITERATIONS,423,20,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ITERATIONS_PER_BODY,423,36,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RANDOMNESS,423,52,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADD,335,68,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXCHANGE,335,81,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DIFFUSE,335,95,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REMOVE,425,81,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_UPDATE,425,95,30,13,ES_AUTOHSCROLL
+    LTEXT           "Frames allowed outside interest region",IDC_STATIC,23,49,124,8
+    GROUPBOX        " Jump-diffusion probabilities ",IDC_STATIC,264,7,238,179
+    LTEXT           "Number of jump-diffuse iterations",IDC_STATIC,307,23,108,8
+    LTEXT           "Remove body",IDC_STATIC,375,84,45,8
+    LTEXT           "Change w/h",IDC_STATIC,291,95,40,8
+    LTEXT           "Move",IDC_STATIC,401,97,18,8
+    LTEXT           "Switch IDs",IDC_STATIC,297,84,34,8
+    LTEXT           "Randomness of accepting candidates",IDC_STATIC,297,52,120,8
+    LTEXT           "Add new body",IDC_STATIC,283,71,47,8
+    LTEXT           "Position model noise",IDC_STATIC,23,63,65,8
+    CTEXT           "Position measurement noise",IDC_STATIC,133,63,91,10
+    GROUPBOX        " Tracking Parameters ",IDC_STATIC,7,7,251,178
+    LTEXT           "Max door distance",IDC_STATIC,27,17,60,8
+    LTEXT           "Iteration per existing body",IDC_STATIC,329,39,86,8
+    LTEXT           "Frames allowed to be invisible",IDC_STATIC,23,34,96,8
+    LTEXT           "Orientation model noise",IDC_STATIC,13,82,76,8
+    CTEXT           "Orientation measurement noise",IDC_STATIC,123,82,101,10
+    LTEXT           "... dormant",IDC_STATIC,165,34,38,8
+    LTEXT           "Body distance confidence",IDC_STATIC,135,17,82,8
+    LTEXT           "Time to start trusting sizes and locations (frames)",IDC_STATIC,13,97,164,13
+    EDITTEXT        IDC_SATURATIONTIME,180,95,30,13,ES_AUTOHSCROLL
+    LTEXT           "Dormant: max color change (0..1)",IDC_STATIC,13,113,130,13
+    EDITTEXT        IDC_MAXHISTCHANGE,147,111,30,13,ES_AUTOHSCROLL
+    LTEXT           "Dormant: max position change (cm)",IDC_STATIC,13,128,130,13
+    EDITTEXT        IDC_MAXPOSCHANGE,147,127,30,13,ES_AUTOHSCROLL
+    LTEXT           "Recover deleted up to (frames)",IDC_STATIC,13,144,130,13
+    EDITTEXT        IDC_MAXDELETEDAGE,147,143,30,13,ES_AUTOHSCROLL
+    LTEXT           "Recover deleted closer than (cm)",IDC_STATIC,14,160,130,13
+    EDITTEXT        IDC_MAXDELETEDDIST,148,159,30,13,ES_AUTOHSCROLL
+END
+
+IDDS_BODYPRIORSTAB DIALOGEX 0, 0, 509, 227
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_HEIGHTM,59,17,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHTS,106,17,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHTMIN,153,17,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHTMAX,201,17,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIDTHM,59,33,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIDTHS,106,33,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIDTHMIN,153,33,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIDTHMAX,201,34,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BODYOVERLAP,90,71,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BODYMINDISTANCE,191,72,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OBSTACLEOVERLAP,90,88,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PNONE,90,104,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PDISTANCE,191,106,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PNEW,90,122,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PDELETE,191,122,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PWIDTH,90,139,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHEIGHT,191,139,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PABNORMALW,90,156,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PABNORMALH,191,157,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POBJECT,90,173,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PBG,90,189,30,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PFG,191,188,30,13,ES_AUTOHSCROLL
+    LTEXT           "mean",IDC_STATIC,38,19,18,8
+    GROUPBOX        "Body Size Priors ",IDC_STATIC,7,8,227,48
+    LTEXT           "Height:",IDC_STATIC,12,19,24,8
+    LTEXT           "min",IDC_STATIC,140,19,12,8
+    LTEXT           "max",IDC_STATIC,187,19,14,8
+    GROUPBOX        " Prior Probability Penalties for ...",IDC_STATIC,7,60,226,151
+    LTEXT           "Position shift",IDC_STATIC,139,107,42,8
+    LTEXT           "Add body",IDC_STATIC,47,124,32,8
+    LTEXT           "Too many bodies",IDC_STATIC,24,107,55,8
+    LTEXT           "Delete body",IDC_STATIC,141,124,40,8
+    LTEXT           "Changes in width",IDC_STATIC,23,141,56,8
+    LTEXT           "Height:",IDC_STATIC,157,142,24,8
+    LTEXT           "Color difference",IDC_STATIC,27,175,52,8
+    LTEXT           "Excessive blobs",IDC_STATIC,28,192,50,8
+    LTEXT           "Abnormal width",IDC_STATIC,29,158,50,8
+    LTEXT           "Excessive bodies",IDC_STATIC,127,192,55,8
+    LTEXT           "Height:",IDC_STATIC,157,160,24,8
+    LTEXT           "+/-",IDC_STATIC,92,19,12,8
+    LTEXT           "mean",IDC_STATIC,38,35,18,8
+    LTEXT           "Width:",IDC_STATIC,12,35,22,8
+    LTEXT           "min",IDC_STATIC,140,35,12,8
+    LTEXT           "max",IDC_STATIC,187,35,14,8
+    LTEXT           "+/-",IDC_STATIC,92,35,12,8
+    LTEXT           "Body overlap",IDC_STATIC,35,74,43,8
+    LTEXT           "Obstacle overlap",IDC_STATIC,23,90,55,8
+    LTEXT           "min distance (% width)",IDC_STATIC,142,74,40,18,0,0,HIDC_STATIC
+    CONTROL         "Use Color?",IDC_USECOLOR,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,147,175,63,9
+END
+
+IDD_ZOOMTOOLBAR DIALOGEX 0, 0, 191, 27
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ZOOMSLIDER,"msctls_trackbar32",WS_TABSTOP,7,2,119,20,WS_EX_TRANSPARENT
+    CTEXT           "Static",ID_ZOOM,128,7,53,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_BLOBDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_BACKGROUNDDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 610
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_BODYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 488
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 241
+    END
+
+    IDD_TRACKER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 430
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_FINISH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_DOORDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 976
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 546
+    END
+
+    IDD_MYPROPERTYPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_CALIBRATEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 1122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 571
+    END
+
+    IDD_SELECTCAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_FLOORDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 1036
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 562
+    END
+
+    IDD_OBSTACLEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 940
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 546
+    END
+
+    IDD_TRACKTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 23
+    END
+
+    IDD_SKINDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 998
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 544
+    END
+
+    IDD_BODYACTIVITYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 448
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_RECORD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_CONTROL_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_MESSAGEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 496
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_SWARMACTIVITYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 618
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+
+    IDDS_PROXIMITYEVENTDETECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDDS_GROUPINGEVENTDETECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 500
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDDS_LEADERFOLLOWINGEVENTDETECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDDS_LININGUPEVENTDETECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDDS_CODWELLINGEVENTDETECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_BLENDTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 82
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 20
+    END
+
+    IDD_ZONEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 849
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 507
+    END
+
+    IDDS_BODYTRACKINGTAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDDS_BODYPRIORSTAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_ZOOMTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 22
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_FILE TOOLBAR  32, 32
+BEGIN
+    BUTTON      ID_PLAY
+    SEPARATOR
+    BUTTON      ID_RECORD
+    SEPARATOR
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_SETTINGS_PARAMETERS
+    SEPARATOR
+    BUTTON      ID_STOP
+    BUTTON      ID_UPDATE_BG
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_FRAME_INDICATOR      "Frame number status msg"
+    IDR_MAINFRAME           "NewVision\n\n\nNewVision Projects (*.proj)\n.proj\nNewVision.Document\nNewVision.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "New Vision"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new project\nNew project"
+    ID_FILE_OPEN            "Open an existing project\nOpen project"
+    ID_FILE_CLOSE           "Close active project\nClose"
+    ID_FILE_SAVE            "Save active project\nSave project"
+    ID_FILE_SAVE_AS         "Save active project with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WAIT                "Wait..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE                 "Process file\nFile"
+    ID_CAMERA               "Process the stream from camera\nCamera"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BODY                 "Body detection properties"
+    ID_SETTINGS_RECORD      "Record the scene into a file\nRecord"
+    ID_SETTINGS_PARAMETERS  "Project preferences (F12)\nProject preferences (F12)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PAUSE                "Pause\nPause"
+    ID_RECORD2              "Stop recording\nStop recording"
+    ID_RECORD               "Start/stop recording\nStart/stop recording"
+    ID_STOP                 "Stop and Reset\nStop and Reset"
+    ID_PLAY                 "Play\nPlay"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DATA_SAVEHEATMAP     "Save heat map\nSave heat map"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_ABOUT           "About New Vision\nAbout New Vision"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PLAY_RECORDED_TRACKING_DATA 
+                            "Play back recorded tracking data\nPlay back recorded tracking data"
+    ID_ACTION_GOTOFRAME     "Go To Frame (Ctrl-G)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_UPDATE_BG            "Update background model now!"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NewVision.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

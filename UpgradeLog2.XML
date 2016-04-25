@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NewVision">
+</Property><Property Name="Solution File" Value="F:\My Documents\My Research\Code\C++\Projects\NewVision\NewVision.sln">
+</Property><Property Name="Date" Value="Monday, April 14, 2008">
+</Property><Property Name="Time" Value="12:07 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="NewVision" Source="NewVision\NewVision.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="NewVision" Source="NewVision\NewVision.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="NewVision" Source="NewVision\NewVision.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="NewVision" Source="NewVision\NewVision.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InstallClass" Source="InstallClass\InstallClass.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="InstallClass" Source="InstallClass\InstallClass.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Uninstaller" Source="Uninstaller\Uninstaller.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Uninstaller" Source="Uninstaller\Uninstaller.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PGRSourceFilter" Source="PGRSourceFilter\PGRSourceFilter.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="PGRSourceFilter" Source="PGRSourceFilter\PGRSourceFilter.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="PGRSourceFilter" Source="PGRSourceFilter\PGRSourceFilter.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="PGRSourceFilter" Source="PGRSourceFilter\PGRSourceFilter.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="NewVision.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="NewVision.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InstallClass" Source="InstallClass\InstallClass.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Uninstaller" Source="Uninstaller\Uninstaller.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,9 @@
+base referer
+rect $_std_afx_8h.html 765,5 835,32
+rect $_new_vision_doc_8h.html 579,107 699,133
+rect $_zone_dialog_8h.html 749,157 851,184
+rect $_floor_region_8h.html 748,208 852,235
+rect $_globals_8h.html 761,259 839,285
+rect $_text_entry_dlg_8h.html 583,309 695,336
+rect $_new_vision_8h.html 591,360 687,387
+rect $_cuboid_8h.html 601,411 676,437

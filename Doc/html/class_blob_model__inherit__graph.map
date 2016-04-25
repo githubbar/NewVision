@@ -1,0 +1,4 @@
+base referer
+rect $class_blob_dialog.html 5,485 152,645
+rect $class_c_blob_dialog.html 176,485 323,645
+rect $class_model.html 121,5 207,101

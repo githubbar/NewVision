@@ -1,0 +1,7 @@
+base referer
+rect $_std_afx_8h.html 627,5 699,32
+rect $_globals_8h.html 624,56 701,83
+rect $_obstacle_model_8h.html 601,107 724,133
+rect $_object3_d_8h.html 619,157 707,184
+rect $_new_vision_doc_8h.html 603,208 723,235
+rect $_new_vision_view_8h.html 600,259 725,285

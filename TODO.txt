@@ -1,0 +1,84 @@
+BUGS:
+-----
+
+- video from filter is one step ahead of overlayed "imgFrame"
+- make Tsai camera model work for points
+
+LONG TERM:
+------------
+- CONCEPTUAL: re-design NewVision so that there are two modes: sequential (frame by frame) and analytical (e.g. show all tracks or run data analysis)
+- FEATURE: add round and polygonal Obstacle types
+- FEATURE: add CameraModel::RasterizeCylinder() method
+- FEATURE: create third type of CameraModel that account for radial distortions 
+- FEATURE: implement MeanShift() for spherical model
+- GUI: change views to separate child windows (like in LadyBugCap)
+- FEATURE: convert to managed code, add NewVision namespace to the project, re-write Serialization in mananged classes
+- FEATURE: use stl::array instead of CArray .... same with CMap
+- UNRESOLVED: fix Body::Body(BlobRay* r, CNewVisionDoc* doc, int id, int frameNumber) to use BlobRay not the top/bot but as the boundaries of ellipsoidal projection
+- UNRESOLVED: write a function to fit an ellipse into a rectangle
+- FEATURE: create heatmap class to control all aspects of heatmap visualization (and some dialogs too)
+- FUTURE: export: record crowdedness history before and after the customer enters a zone (10sec, 20sec, 30sec before )
+- FUTURE: export: have multiple overlapping zones with probabilities assigned to each zone (based on averge distance)
+- FEATURE: Ability to save/restore current project state: frame, tracking state, BG state
+- FEATURE: Give more weight to newer samples in histogram accumulation 
+- FEATURE: modify BG model to merge neighboring codewords that are old enough (think of more optimizations of BG model, run test)
+- FEATURE: undo last action (CTRL-Z)
+- GUI: in zones, doors, etc; make mouse click add a vertex in the vicinity (not based on the last vertex index)
+- FEATURE: visualization dialog to choose which tag/categories to draw (applies heatmap and tracks)
+- FEATURE: save FloorMap image as part of the .proj file
+- FEATURE: how to update overlay and frame display info without calling IMediaSeek::SetPositions?
+- FEATURE: control playback rate CTRL-R (x1.0 is normal); in "playback" mode and any other modes make directshow play back at the actual speed; 
+- BUG: display checkboxes must depend on the "process type" checkboxes in the toolbar, BUG: when video is running, many buttons (like remove doors or floor points) have to be disabled!  
+- BUG: in BodyModel::Iterate() the priors for mutations don't work due to many failed permutations
+- BUG: in empty (unititialized) project, switching to camera model crashes the app
+- BUG: font in TextEntryDlg.cpp , line 87 when clicking a button from F9 view (	m_Font.CreatePointFont(80, "MS Sans Serif");)
+- FEATURE: (create versioning in data and .proj file serialization) IMPLEMENT_SERIAL(CMyObject, CObject, VERSIONABLE_SCHEMA|1)
+- GUI: CDC Body::Draw pretty functionality
+- FEATURE: right click on body and "remove current from BG" to remove pixels in the ellipse from BG codebooks
+
+PRIORITIES:
+------------
+
+% FEATURE: cache body paths to disk (or it runs out of memory on longer sequence ~ 1 hour)
+
+% Tag: Highlight product interacting for purchases from existing "product interaction" tags
+
+% FEATURE: implement body motion flow to detect browsing behavior
+% BUG: switching between pgr dome and pano fails in size
+% BUG: doesn't add bodies, when there are too many blobs (could be because merged blobs are too tall?)
+	to much area they cover?
+
+- FEATURE: consider using sparse color histograms and cvCalcEMD2
+
+
+
+Swarming activity
+-----------------
+
+- visualize SwarmEvents clustering with x,y = position and z = time; SwarActivites - color events with the same color
+
+Visualization
+-------------
+- add X3D vexel, heatmap and track export dialog
+- de-serialize x3d
+- add smoothness to the pipes (simulate NurbsCurve with extrusion)
+- visualize tracklets with waves of ripples 
+- makes zones/obstacles draw properly in camera view (center parts)
+
+Tracking
+--------
+- improve human detection with Oncel Tuzel, Fatih Porikli, and Peter Meer, Human Detection via Classification on Riemannian Manifolds
+- connect tracklets with KLT feature tracker http://cs.unc.edu/~ssinha/Research/GPU_KLT/
+
+Other
+-----
+- BUG: zoom crashes below 0.94 on slow machines; problem: SetVideoPostition; try even size
+- ! check fixtrures 17,20,28 in 12th and 19th; display ID instead fo the label		
+- BUG: compute median height instead of mean height for export (same for width)
+
+
+
+
+================================================
+
++ FEATURE: Implement XML tag shortcuts

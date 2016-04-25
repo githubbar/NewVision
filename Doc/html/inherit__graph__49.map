@@ -1,0 +1,4 @@
+base referer
+rect $class_c_zoom_view.html 7,5 100,32
+rect $class_c_new_vision_view.html 149,5 272,32
+rect $class_c_open_g_l_base.html 321,5 433,32

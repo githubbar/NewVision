@@ -1,0 +1,10 @@
+base referer
+rect $_std_afx_8h.html 631,5 700,32
+rect $_main_frm_8h.html 623,56 708,83
+rect $_new_vision_8h.html 617,107 713,133
+rect $_new_vision_doc_8h.html 605,157 725,184
+rect $_new_vision_view_8h.html 603,208 728,235
+rect $_tracker_model_8h.html 608,259 723,285
+rect $_globals_8h.html 627,309 704,336
+rect $_body_8h.html 633,360 697,387
+rect $_body_path_8h.html 620,411 711,437

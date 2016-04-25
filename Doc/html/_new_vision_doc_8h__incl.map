@@ -1,0 +1,15 @@
+base referer
+rect $_tracker_dialog_8h.html 603,165 720,192
+rect $_background_dialog_8h.html 591,216 732,243
+rect $_blob_dialog_8h.html 613,267 709,293
+rect $_body_dialog_8h.html 611,317 712,344
+rect $_body_activity_dialog_8h.html 589,368 733,395
+rect $_swarm_activity_dialog_8h.html 584,419 739,445
+rect $_skin_dialog_8h.html 613,469 709,496
+rect $_door_dialog_8h.html 612,520 711,547
+rect $_camera_dialog_8h.html 603,571 720,597
+rect $_floor_dialog_8h.html 611,621 712,648
+rect $_obstacle_dialog_8h.html 600,672 723,699
+rect $_zone_dialog_8h.html 611,723 712,749
+rect $_message_dialog_8h.html 599,773 724,800
+rect $_tree_prop_sheet_8h.html 599,824 724,851

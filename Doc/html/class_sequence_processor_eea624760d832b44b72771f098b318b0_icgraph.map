@@ -1,0 +1,6 @@
+base referer
+rect $class_sequence_processor.html#c6042fbffcd47f0b8f7cf64640346beb 325,5 523,32
+rect $class_c_new_vision_view.html#86d9830b299fcb2f4c0a50d49ecd7dab 312,56 536,83
+rect $class_c_new_vision_view.html#7fd7cb16aead0ab744ec4e742c8859f9 305,107 543,133
+rect $class_tracker_model.html#dba2a335a62d50630103f42748d71276 593,5 753,32
+rect $class_tracker_dialog.html#9c14cfc56025d8f18a823a88e989d121 803,5 965,32

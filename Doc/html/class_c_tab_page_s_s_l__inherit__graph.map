@@ -1,0 +1,4 @@
+base referer
+rect $class_body_dialog_1_1_body_priors_tab.html 5,437 192,549
+rect $class_body_dialog_1_1_body_tracking_tab.html 216,437 419,549
+rect $class_swarm_event_detector.html 443,373 680,613

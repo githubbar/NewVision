@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"> 
+<HTML> 
+<HEAD> <META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252"> 
+<TITLE>Body Model</TITLE> 
+</HEAD>  
+
+<BODY>  
+
+<P><A NAME="afx_hidd_body_model"></A><B>Body Model</B></P>  
+
+<P>
+For each person in the scene New Vision&#153 attempts to assign a <STRONG>body</STRONG>. Body is an ellipsoid with a unique ID displayed at the top. It is characterized by its distinct position in 3D space (XYZ), its height and width (in centimeters) and its color histogram. <BR>
+At each frame New Vision&#153 it performing a number of operations on the bodies, including moving the existing bodies, changing their dimensions, creating new bodies for newly appearing people and deleting the bodies as people move out of the camera view. The goal is to explian the current composition of the scene in optimal way. The comination of all bodies currently in the scene as well as parameters that control their behavior is referred to as a <STRONG>body model</STRONG>
+
+<P>
+<img src="Images/bodies.png">
+</P>
+</P>
+
+<P>This dialog controls the parameters of body model for your tracking project.</P>
+<P>
+<img src="Images/body_model.png">
+</P>
+
+<P>
+<H3>1. Body Size Priors</H3>
+<H4>Width spread, Average width, Max width and Min width</H4>
+All control the width of the ellipsoid representing a tracked body:
+<UL>
+<LI>Width spread :  standard deviation of body width in centimeters (cm) <STRONG> Default setting:</STRONG>20
+<LI>Average width :  mean of body width in centimeters (cm) <STRONG> Default setting:</STRONG>70
+<LI>Max width:  an upper cutoff value for body width (cm)<STRONG> Default setting:</STRONG>100
+<LI>Min width:  a lower cutoff value for body width (cm)<STRONG> Default setting:</STRONG>40
+</UL>
+
+<H4>Height spread, Average height, Max height and Min height</H4>
+All control the height of the ellipsoid representing a tracked body:
+<UL>
+<LI>Height spread :  standard deviation of body height in centimeters (cm) <STRONG> Default setting: </STRONG>20
+<LI>Average height :  mean of body height in centimeters (cm) <STRONG> Default setting: </STRONG>170
+<LI>Max height :  an upper cutoff value for body height (cm)<STRONG> Default setting: </STRONG>200
+<LI>Min height :  a lower cutoff value for body height (cm)<STRONG> Default setting: </STRONG>120
+</UL>
+
+</P> 
+
+<P>
+<H3>2. Prior Probability Penalties for ...</H3>
+These are perhraphs the parameters you will <em color="red">have to adjust most frequently</FONT>. It is somewhat of an art to find the most successfull combination for a particular scene, but some of the guidelines are provided below. All values in this box should typically <STRONG>range from 0 to 1</STRONG>, although some can be set higher.
+
+<H4>Too many bodies</H4>  
+Set it to a number greater than zero if you would like the tracker to favour the explanations of the scene which have fewer people in them.<BR>
+<STRONG>Default setting: </STRONG>0
+
+<H4>Position shift </H4>  
+Controls how much to punish the bodies straying away from their predicted position. The predicted position is simply the posistion of the same body in the previous frame plus a small shift calculated with the help of <A HREF="http://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</A> <BR>
+<STRONG>Default setting: </STRONG>0.1
+
+<H4>Add body and delete body</H4>  
+Controls how much to punish the system for adding new bodies and deleting the existing ones. Increase these values to make the tracker more likely to explain the scene moving around already existing bodies. Note: the penalty for adding/deleting bodies is reverse proportional to the distance of the body from the closest door.<BR>
+<STRONG>Default setting: </STRONG>1 and 1
+
+<H4>Changes in width/height</H4>  
+Controls how much to punish the system for changing existing bodies width or height. Increase these values if you observe the size of the bodies changing frequently.<BR>
+<STRONG>Default setting: </STRONG>0.1 and 0.1
+
+<H4>Abnormal width/height</H4>  
+Controls how strictly the system abides by the average dimensions of the body specified in "Body Size Priors". Increase these values if you observe excessively large/small bodies.<BR>
+<STRONG>Default setting: </STRONG>0.1 and 0.1
+
+<H4>Color difference</H4>  
+Every body in the system is described by a color histogram pepresenting its historical appearance. The histogram is constantly updated and becomes something of an average descriptor of how the body looks This value controls how tight the system tries to match the color of the body in the current frame to the historical color information in form of a histogram. <BR>
+<BR>
+<STRONG>Default setting: </STRONG>0.1
+
+<H4>Excessive blobs/bodies</H4>  
+The tracker uses the foreground map produced by the background subtraction step to drive the tracking process. It attempts to cover each blob with one or more body (ellipsoid). If parts of the blobs are not covered we get <STRONG>excessive blobs</STRONG>.On the other hands if some bodies cover the pixels outside blob areas we get <STRONG>excessive bodies</STRONG>. These parameters punish the system for each of those things happening. Empirical evidence shows that typically these values should be balancen (equal) with "excessive blobs" punishments, possibly, being slightly greater. Also, since they are the driving force ot the tracker, these should be greater that most of the other penalties<BR>
+<STRONG>Default setting: </STRONG>1 and 1
+
+<H3>3. Tracking Parameters </H3>
+
+<H4>Max door distance</H4>  
+Sets the maximum distance (cm) from the closest door at which a new body can be added or an existing one deleted .<BR>
+<STRONG>Default setting: </STRONG>200
+
+<H4>Body distance confidence</H4>  
+Represent the average accuracy (cm) of tracking the bodies. Raise this number for poorer quality videos.
+<BR>
+<STRONG>Default setting: </STRONG>60
+
+<H4>Frames allowed to be invisible</H4>  
+If the body no longer covers a blob it becomes invisible. This value specifies after how many frames it will be deleted.<BR>
+<STRONG>Default setting: </STRONG>30
+
+<H4>Frames allowed to be dormant</H4>  
+Due to artifacts created by the background subtraction process, for instance a person occupying the same location during all of the background training stage, sometimes "false bodies" can be created. To deal with this problem New Vision&#153 employs the mechanism to remove such "false bodies" from the system. If a body is not moving and not changing its appearance it is marked as dormant. This parameter controls after how many frames a dormant body will be removed. <BR>
+<STRONG>Default setting: </STRONG>100
+
+<H4>Frames allowed outside interest region</H4>  
+One type of door model is "interest region". This value controls how many frames after it leaves the interest region it will be removed from the system.<BR>
+<STRONG>Default setting: </STRONG>30
+
+<H4>Position model/measurement noise</H4>  
+Control the parameters of <A HREF="http://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</A> predicting the next position of each body.<BR>
+<STRONG>Default setting: </STRONG>1 and 50
+
+<H4>Orientation model/measurement noise</H4>  
+Control the parameters of <A HREF="http://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</A> predicting the orientation angle of each body.<BR>
+<STRONG>Default setting: </STRONG>0.001 and 1
+
+</P> 
+
+<H3>3. Jump Diffusion probabilities</H3>
+New Vision&#153 uses a jump-diffuse variation of sequential <A href="http://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov Chain Monte Carlo</A> algorithm. The values below control how likely each type of jump or diffusion is likely to happen.
+
+<H4>Number of jump-diffuse iterations</H4>  
+The number of random changes to the system made at each per frame. Increase this value to make the tracker perfrom a more thorough search for the best configuration (takes more time).
+<BR>
+<STRONG>Default setting: </STRONG>20
+
+<H4>Iterations per existing body</H4>  
+The system will add this many iterations for each body currently being tracked to the number in "Number of jump-diffuse iterations". Example: Number of jump-diffuse iterations = 50; Iterations per existing body = 6; Total bodies in the system = 3; Total iterations = 50+6*3 = 68.<BR>
+<STRONG>Default setting: </STRONG>6
+
+<H4>Randomness of accepting candidates</H4>  
+If one body configuration has received a better score than another it will most likely be accepted. How likely? If this parameter is zero then certainly. If it is higher, e.g. 0.05 then there is a 5% chance that the configuration that is worse will actually be accepted. This is needed to support a truly random walk of the space of possibilities.<BR>
+<STRONG>Default setting: </STRONG>0.25
+
+<H4>Jump-diffusion likelihoods</H4>  
+<UL>
+<LI>Add new body: <STRONG>Default setting: </STRONG>0.1
+<LI>Switch IDs: <STRONG>Default setting: </STRONG>0.1
+<LI>Change w/h: <STRONG>Default setting: </STRONG>0.3
+<LI>Remove body: <STRONG>Default setting: </STRONG>0.1
+<LI>Move: <STRONG>Default setting: </STRONG>0.2
+
+</UL>
+
+</P> 
+
+</BODY> </HTML> 

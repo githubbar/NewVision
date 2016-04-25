@@ -1,0 +1,6 @@
+base referer
+rect $class_body_cluster_element.html 5,432 176,640
+rect $class_smart_ptr_array.html 200,424 451,648
+rect $class_c_array.html 151,208 369,288
+rect $class_smart_ptr_array.html 393,136 559,360
+rect $class_c_array.html 411,5 541,85

@@ -1,0 +1,8 @@
+
++ GroupingEventDetector class to detect co-shopping events and activities
+
+- Add feature for user to manually flag employees and code other important information (e.g., gender: male/female, age category: child/teen/adult/elderly, buyer: yes/no).
+
+- Modify interface so that a user can manually correct misclassifications and broken tracks. For example, let's say that a shopper crosses paths with another shopper and NewVision accidentally switches their identities.  The user could make the correction and NewVision would record this as a manually switched identity.   Similarly, if a shopper walks behind a fixture and the computer creates two separate tracks, the user could manually link these into a single track and NewVision would record this error correction. Also, correcting errors can at the same time serve as validation!!!
+
+- Create "interest areas" class (directional/non-directional, shaped as a line, poly-line or polygon) with tags assigned to each person moving through the area; in addition to door models

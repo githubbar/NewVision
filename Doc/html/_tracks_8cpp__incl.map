@@ -1,0 +1,11 @@
+base referer
+rect $_std_afx_8h.html 555,284 624,311
+rect $_tracks_8h.html 552,715 627,741
+rect $_persistant_formats_8h.html 676,563 817,589
+rect $_pedestrian_tags_8h.html 684,613 809,640
+rect $_new_vision_doc_8h.html 687,664 807,691
+rect $_new_vision_view_8h.html 684,715 809,741
+rect $_body_path_8h.html 701,765 792,792
+rect $_text_entry_dlg_8h.html 691,816 803,843
+rect $_new_vision_8h.html 699,867 795,893
+rect $_main_frm_8h.html 704,917 789,944

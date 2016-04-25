@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"> 
+<HTML> 
+<HEAD> <META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252"> 
+<TITLE>Camera Model</TITLE> 
+</HEAD>  
+
+<BODY>  
+
+<P><A NAME="afx_hidd_camera_model"></A><B>Camera Model</B></P>  
+
+<P>This dialog controls camera calibration for your tracking project.</P>
+<P>
+<img src="Images/camera_model.png">
+</P>
+
+<P>
+<H4>1. Main Screen</H4>
+This screen allows to calibrate the camera  "Monoscopic" mode <BR>
+The calibration is done in two steps:
+<OL>
+<LI>Setting the vanishing points: 
+<OL TYPE=a>
+<LI>Find at least two parallel lines in the scence (buildings, isles, boxes, etc) and with the left mouse button drag-and-draw RED parallel lines on top. These line will represent parallel lines in the X-axis direction. You can drag the endpoints of the line to adjust its position. While dragging, pressing DELETE button will remove the line.
+<LI>Now do the same for Y-axis direction this time using the middle mouse button (or pressing on the mouse wheel) and GREEN lines.
+<LI>Find parallel lines in the scence going vertically up from the ground. Now do the same for Z-axis direction this time using the right mouse button and BLUE lines. This step is essential to determining the correct height of the objects.
+</OL>
+<BR>
+<LI>Setting the scale:
+<OL TYPE=a>
+<LI>This time hold the CTRL key and with any mouse button, mark at least two vertical lines of know height. These lines will appear as LIGHT BLUE. Once done enter the height of each line (in cm) in "Reference heights" box on the right.
+</OL>
+</OL>
+
+<STRONG>Default setting:</STRONG>
+</P> 
+
+<P>
+<H4>2. Camera Type </H4>
+Currently two camera models are supported: panoramic "unprojected map" model and "perspective projection" (regular monocular camera) model. If camera type is set to "panoramic" the dialog will change prompting you to enter only the elevation of the camera from the ground (cm). 
+<P>
+<img src="Images/camera_model_panoramic.png">
+</P>
+<BR>
+<STRONG>Default setting:</STRONG> Monoscopic
+</P> 
+
+<P>
+<H4>3. Reference heights</H4>
+Specify the height of each reference LIGHT BLUE line  (in cm). Click "Add" to add values and "Delete" to clear all values.<BR>
+<STRONG>Default setting:</STRONG> None
+</P> 
+
+<P>
+<H4>4. Reset</H4>
+Clears all the settings, including the main screen.<BR>
+<STRONG>Default setting:</STRONG> None
+</P> 
+
+</BODY> </HTML> 

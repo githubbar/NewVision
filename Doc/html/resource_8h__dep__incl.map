@@ -1,0 +1,16 @@
+base referer
+rect $_about_dialog_8cpp.html 577,5 1105,32
+rect $_new_vision_8h.html 589,56 1093,83
+rect $_tracker_dialog_8h.html 579,107 1104,133
+rect $_background_dialog_8h.html 567,157 1116,184
+rect $_blob_dialog_8h.html 588,208 1095,235
+rect $_progress_dlg_8h.html 584,259 1099,285
+rect $_body_activity_dialog_8h.html 565,309 1117,336
+rect $_swarm_activity_detectors_8h.html 549,360 1133,387
+rect $_swarm_activity_dialog_8h.html 560,411 1123,437
+rect $_skin_dialog_8h.html 588,461 1095,488
+rect $_door_dialog_8h.html 587,512 1096,539
+rect $_zone_dialog_8h.html 587,563 1096,589
+rect $_message_dialog_8h.html 575,613 1108,640
+rect $_main_frm_8h.html 593,664 1089,691
+rect $_tree_prop_sheet_8cpp.html 1181,689 1728,716

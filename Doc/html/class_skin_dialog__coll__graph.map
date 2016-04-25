@@ -1,0 +1,5 @@
+base referer
+rect $class_skin_model.html 5,5 163,245
+rect $class_c_skin_control.html 187,45 328,205
+rect $class_c_histogram_control.html 352,77 507,173
+rect $class_c_color_control.html 531,77 656,173

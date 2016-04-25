@@ -1,0 +1,4 @@
+base referer
+rect $class_door_dialog.html#b79abcbe85f265b3e9fec6020d5c526b 205,5 352,32
+rect $class_c_door_dialog.html#2bad829dd643e120e7dc09c290660e4d 201,56 356,83
+rect $class_c_new_vision_doc.html#9a05754b909fc632e8a495f69a2b6bc8 407,5 583,32

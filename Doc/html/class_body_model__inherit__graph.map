@@ -1,0 +1,4 @@
+base referer
+rect $class_body_dialog.html 5,1701 160,1909
+rect $class_c_body_dialog.html 184,1725 331,1885
+rect $class_model.html 127,5 212,101

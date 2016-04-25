@@ -1,0 +1,5 @@
+base referer
+rect $_std_afx_8h.html 603,284 672,311
+rect $resource_8h.html 592,411 683,437
+rect $_about_dialog_8h.html 584,461 691,488
+rect $_hyper_link_8h.html 739,563 832,589

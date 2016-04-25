@@ -1,0 +1,7 @@
+base referer
+rect $class_object3_d.html 5,56 83,83
+rect $class_body.html 153,5 204,32
+rect $class_floor_region.html 132,56 225,83
+rect $class_obstacle.html 141,107 216,133
+rect $class_cuboid.html 279,81 343,108
+rect $class_cylinder.html 276,132 345,159

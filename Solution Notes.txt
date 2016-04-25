@@ -1,0 +1,59 @@
+
+Products Required to Compile the Source Code:
+---------------------------------------------
+= Microsoft Visual Studio 2008
+	= VAssistX
+	= Resource Organizer (ResOrg) plugin for Visual Studio
+	= run-time type information must be enabled
+= Microsoft .NET Framework 2.0
+= Microsoft DirectX SDK (April 2006)
+= OpenCV 1.0 http://sourceforge.net/projects/opencvlibrary/ (some files are modified, see below)
+= PGR Ladybug API from (ptgrey.com)
+= CoreLibrary http://sourceforge.net/projects/corelibrary/ (for exporting in CVML format)
+= CodySynthesis XSD 2.3.1 library http://www.codesynthesis.com/products/xsd/ (for exporting in X3D format)
+= LibXML http://xmlsoft.org/
+= IconV win32 binaries http://www.gnu.org/software/libiconv/
+= VTK 5.0 visualization library http://www.vtk.org + VTK.NET from http://vtkdotnet.sourceforge.net/ + VTK control from http://vtkdotnet.sourceforge.net/
+= ATI Catalyst Drivers version 8.2 or lower (directshow graph breaks with higher versions)
+
+Products Required to Run the program:
+-------------------------------------
+
+// = "FFdshow-20060828-rev2546.exe" codec pack is required for correct playback and frame navigation (XVID and other versions of FFDShow have proven buggy)
+// http://prdownloads.sourceforge.net/ffdshow-tryout/FFdshow-20060828-rev2546.exe?download
+
+
+= XviD 1.1.3 or later (make sure you have "support all FCCs checked" during installation, and set output color space to RGB24)
+= PGR Ladybug API from (ptgrey.com)
+= Icons from: Windows Icons Hieroglyphica Vol. 2 - by Kate England
+CV library modified:
+--------------------
+Modified OpenCV files are stored in <NewVision>\OpenCV, overwrite existing .c and .h files 
+with those and recompile OpenCV library.
+
+(1) in cv.h, cvhistogram.cpp added 
+
+CV_INLINE void  cvCalcHistWeighted( IplImage** image, CvHistogram* hist,
+                             int accumulate, const CvArr* mask, const CvArr* weight )
+    
+modified:
+
+CV_IMPL void
+cvCalcArrHist( CvArr** img, CvHistogram* hist,
+               int do_not_clear, const CvArr* mask, const CvArr* weight )
+static CvStatus CV_STDCALL
+    icvCalcHist_8u_C1R( uchar** img, int step, uchar* mask, int maskStep, uchar* weight, int weightStep,
+                        CvSize size, CvHistogram* hist )
+static CvStatus CV_STDCALL
+    icvCalcHist_32f_C1R( float** img, int step, uchar* mask, int maskStep, uchar* weight, int weightStep,
+                         CvSize size, CvHistogram* hist )
+    
+
+CoreLibrary library modified:
+-----------------------------
+
+changed DEBUG to DEBUGLVL in "Debug.h" to avoid conflicts with _DEBUG symbol defined by VC .NET debugger
+
+Bug Tracking/Release Features:
+------------------------------
+in TODO.txt

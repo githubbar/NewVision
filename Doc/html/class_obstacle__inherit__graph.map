@@ -1,0 +1,4 @@
+base referer
+rect $class_cuboid.html 5,589 200,1021
+rect $class_cylinder.html 224,581 419,1029
+rect $class_object3_d.html 115,5 309,405

@@ -1,0 +1,5 @@
+base referer
+rect $resource_8h.html 571,192 661,219
+rect $_zone_model_8h.html 567,243 665,269
+rect $_model_8h.html 740,229 809,256
+rect $_smart_ptr_array_8h.html 716,280 833,307

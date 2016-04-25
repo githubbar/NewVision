@@ -1,0 +1,4 @@
+base referer
+rect $class_body.html 5,453 208,1957
+rect $class_floor_region.html 232,957 427,1453
+rect $class_obstacle.html 451,1165 525,1245

@@ -1,0 +1,4 @@
+base referer
+rect $_std_afx_8h.html 699,5 768,32
+rect $_ladybug_stream_reader_8h.html 648,208 819,235
+rect $_ladybug_stream_writer_8h.html 652,259 815,285

@@ -1,0 +1,16 @@
+base referer
+rect $_std_afx_8h.html 661,5 733,32
+rect $_persistant_formats_8h.html 627,56 768,83
+rect $_new_vision_doc_8h.html 637,107 757,133
+rect $_body_path_8h.html 652,157 743,184
+rect $_body_path_cluster_8h.html 631,208 764,235
+rect $_body_8h.html 665,259 729,285
+rect $_floor_region_8h.html 645,309 749,336
+rect $_globals_8h.html 659,360 736,387
+rect $_swarm_activity_8h.html 639,411 756,437
+rect $_swarm_event_8h.html 643,461 752,488
+rect $_x3_d_driver_8h.html 649,512 745,539
+rect $_track_export_settings_8h.html 620,613 775,640
+rect $_pedestrian_tags_8h.html 635,664 760,691
+rect $_text_entry_dlg_8h.html 641,715 753,741
+rect $_cuboid_8h.html 660,765 735,792

@@ -1,0 +1,7 @@
+base referer
+rect $class_background_model.html 5,200 240,744
+rect $class_body_path.html 264,136 443,808
+rect $class_smart_ptr_array.html 569,360 743,584
+rect $class_smart_ptr_array.html 392,872 549,1096
+rect $class_smart_ptr_array.html 796,872 1047,1096
+rect $class_smart_ptr_array.html 573,872 760,1096

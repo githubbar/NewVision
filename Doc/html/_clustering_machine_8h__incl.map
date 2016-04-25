@@ -1,0 +1,6 @@
+base referer
+rect $_globals_8h.html 609,132 687,159
+rect $_progress_dlg_8h.html 736,107 843,133
+rect $_image_8h.html 755,157 824,184
+rect $resource_8h.html 891,107 981,133
+rect $_pixel_8h.html 905,157 967,184

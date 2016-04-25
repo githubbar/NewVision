@@ -1,0 +1,7 @@
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\bin\InstallClass.dll
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\bin\InstallClass.xml
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\obj\Release\ResolveAssemblyReference.cache
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\obj\Release\InstallClass.InstallClass.resources
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\obj\Release\InstallClass.vbproj.GenerateResource.Cache
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\obj\Release\InstallClass.dll
+F:\My Documents\My Research\Code\C++\Projects\NewVision\InstallClass\obj\Release\InstallClass.xml

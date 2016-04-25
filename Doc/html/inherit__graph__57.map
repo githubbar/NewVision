@@ -1,0 +1,3 @@
+base referer
+rect $class_ladybug_stream_reader.html 5,5 165,32
+rect $class_p_g_r_sequence_processor.html 213,5 384,32

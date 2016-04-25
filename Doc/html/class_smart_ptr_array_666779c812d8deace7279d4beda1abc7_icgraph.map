@@ -1,0 +1,15 @@
+base referer
+rect $class_body_cluster.html#47ba92063fc49be8a6c81581c2cbc180 297,5 431,32
+rect $class_obstacle_dialog.html#9b87d3ffaeef9c8cd4543008a6ffc8af 545,56 729,83
+rect $class_blob_model.html#6572ba10f9bce901f20d8670af8fc5c2 285,107 443,133
+rect $class_grouping_event_detector.html#7d9f5402160e6f1e253b9db80584195c 240,157 488,184
+rect $class_blob_model.html#48f5f7283a4dd05437491a97cfd6ca96 288,208 440,235
+rect $class_obstacle_dialog.html#b8c940d23e93cd8a9edff2216e86c799 233,259 495,285
+rect $class_blob_model.html#4ed0b6451b956c8cc24de6ebb91e96ec 283,309 445,336
+rect $class_body_cluster.html#073b6179bf17e1aa6dd466c99bd82f20 273,360 455,387
+rect $class_c_new_vision_doc.html#b2b6dbaa2ff8af6f73194e4aad6b1917 780,81 996,108
+rect $class_blob_dialog.html#f986b20b955553712c65e6f451101519 559,107 716,133
+rect $class_blob_model.html#e4785ea19a26c709edab4003f5909119 568,157 707,184
+rect $class_blob_dialog.html#1db4b0eef3cb6e44cb15eca8da251555 817,157 959,184
+rect $class_tracker_model.html#634616ed84414eb65349260b15ea570a 547,208 728,235
+rect $class_tracker_model.html#357c0075e6e2c72e54b1e2ded85c0600 800,208 976,235

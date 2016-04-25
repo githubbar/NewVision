@@ -1,0 +1,4 @@
+base referer
+rect $class_tracker_dialog.html 9,1749 255,1941
+rect $class_model.html 5,629 91,725
+rect $class_sequence_processor.html 115,5 317,1349

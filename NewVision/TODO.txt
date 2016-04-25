@@ -1,0 +1,285 @@
+- add round and polygonal Obstacle types
+- add CameraModel::RasterizeCylinder() method
+- create third type of CameraModel that account for radial distortions 
+- implement MeanShift() for spherical model
+- change views to separate child windows (like in LadyBugCap)
+- FUTURE: convert to managed code, add NewVision namespace to the project, re-write Serialization in mananged classes
+- FUTURE: consider using sparse color histograms and cvCalcEMD2
+- UNRESOLVED: fix Body::Body(BlobRay* r, CNewVisionDoc* doc, int id, int frameNumber) to use BlobRay not the top/bot but as the boundaries of ellipsoidal projection
+- UNRESOLVED: write a function to fit an ellipse into a rectangle
+
+
+- BUG: app closes the window but stays in memory (stop() conflict?) freezes in SequenceProcessor::Clear();
+	FIX: ??? SampleGrabberCB was dealocking the filter's release process
+	FIX: calling stop right at the end of CNewVisionDoc::Initialize() does not hang, why?
+
+BUG: frames numbers are shifted (at least on Alex's computer); video starts with frame 2!
+BUG: scolling in CNewVisionView does not scroll video position
+FEATURE: how to update overlay and frame display info without calling IMediaSeek::SetPositions?
+FEATURE: replace IMediaDet with the thing from VideoAna sample
+
+IN PROGRESS: create GroupingEventDetector class to detect co-shopping events and activities
+BUG: display checkboxes must depend on the "process type" checkboxes in the toolbar, BUG: when video is running, many buttons (like remove doors or floor points) have to be disabled!  
+BUG: in BodyModel::Iterate() the priors for mutations don't work due to many failed permutations
+BUG: in empty (unititialized) project, switching to camera model crashes the app
+FEATURE: Create "interest areas" class (directional/non-directional, with possibly a line, poly-line or polygon) with tags assigned to each person moving through the area; in addition to door models (Add new door model COUNTER or tracking mode: count pedestrians passing through (entering/exitting?) a polygonal interest region). Also use areas to lower grouping weight by the checkout and raise it around the entrance
+FEATURE: Change Track Log file format to comply with the sheet Ray gave me
+FEATURE: add auto-save for tracking and activity info
+FEATURE: Zoom in/out capabilities
+FEATURE: Ability to save/restore current project state: frame, tracking state, BG state
+FEATURE: Give more weight to newer samples in histogram accumulation 
+FEATURE: modify BG model to merge neighboring codewords that are old enough (think of more optimizations of BG model, run test)
+
+NewVision v1.0:
+----------------
+- BUG: SequenceProcess::Clear crashes upon closing a running document (in Release)
+	FIX: check if theApp->mainWnd exists in TrackerModel::RunTracker() before sending update messages to the window
+- BUG: on loading track data in tracking mode does not go to the last frame!
+	FIX: changed CNewVisionDoc::OnLoadTrackingData, might require additional thread synchronization
+BUG: in CameraModel::DrawVerticalSpheroid() fills a horizontal strip when y is somewhere in the middle (see C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\NewVision\Projects\DrawVerticalSperoid bug in frame 104.dat):  
+	DESCRIPTION: the problem is due to D1 < -EPSILON; seems D1 is prone to some rounding or overflow error
+	FIX 1: increase EPSILON from 0.00001 to 0.01 
+	FIX 2: use EPSILON in all comparisons instead of zero
+	POTENTIAL FEATURE: use float_control pragma to optimize the slowest part of NewVision (histogram comparison)
+- FEATURE: add "always merge with ID" edit box for playback mode to speed up correction
+- BUG: dragging pre-loaded body deletes it; dragging to create a new body, deletes all pre-loaded bodies
+	FIX: in  TrackingData::Get() rewrite visible attribute handling; don't use it for Body, only for BodyPath
+- BUG: floor view won't work; re-work using a separate image
+	FIX: overlaying imgFloor on top of video with no transparency
+- BUG: pressing escape maximizes and then restores the window (should be OnPause())
+	FIX: unknown....just went away LOL
+- BUG: in tracking mode CNewVisionDoc:GoToFrame followed by OnPlay() freezes the app
+	FIX: a call for LoadLastTrackedFrame() in TrackerModel::Run() was causing it; replaced by disabling navigation
+- BUG: loading one project after another breaks, REWORK THE WHOLE THING! I.e AE - Jan 19, 2006 - 1600 - Heatmap.proj after anything crashes,or AE - Jan 12, 2006 - 1600.proj after AE - Jan 12, 2006 from PGR - 1600.proj crashes
+	FIX: re-writing DiretX solved this
+- BUG: recording video now won't work ; use IVMRWindowlessControl  to get current frame
+	FIX: can now display "original input image" on top of DX output 
+	(a bit redundant but this way the old recording mechanism works)
+- BUG: BackgroundModel::Draw(IplImage* frame) crashes if BG is empty; blobs don't always display, BG subtraction changed under new filters
+	FIX: changed checking of imgThermal existance to the check of tracker mode COLOR_THERMAL_PAIR
+- BUG: stream reading and pressing Pause sometimes still causes deadlock (see cautolock)
+	FIX: hopefully resolved by re-writing directx filters
+- FEATURE: button in "Track Editor" to bridge small gaps in tracks (< 5 frames?)
+- FEATURE: re-work entire stream processing using VMR9 and overlay images, this eliminates flicker
+- BUG: all IDs disappear for one frame
+	FIX: don't remember, but seems to work now
+- BUG: calling message from tracker thread Message() locks the main  GUI thread
+	FIX: re-wrote thread synchronization
+- FEATURE: set playback rate (Ctrl-R) to fast-forward, fast backward
+- FEATURE: ctrl+click to toggle manual confidence between set and unset
+- FIX: re-wrote DirectShow part using SampleGrabber filter instead of TransInPlace. fixed several synchronization bugs
+- FEATURE: Swarm Event and Swarm Activity detection
+- FEATURE: in PLAYBACK mode create shortcuts to set confidence to 0 or 1 and apply tags with "button push"+"mouse click" over body tag
+- FEATURE: in PLAYBACK mode draw body ellipses colorizing confidence level (e.g green=1, read=0)
+- FEATURE: upon switching to TRACKING mode jump to the last frame with BodyPath data
+- Remove "Swap ID" functionality as confusing
+- BUG: Uninstall doesn't work: SOLUTION: copy .msi file as part of the install process
+- FEATURE: create fourth type of TrackerModel to work directly with ladybug PGR files 
+- FEATURE: in F9 dialog add "Show visibility intervals" button to AfxMessageBox a list of visibility intervals for a selected body
+- FEATURE: Created web-installer
+- FEATURE: Added vanishing tails to floor view bodies
+- BUG: pressing stop twice crashes the app; related: BUG: In NewVisionDoc::Initialize() need to roll-back before returning false, if any of Initialize() methods fails
+  FIX: works now (forgot the fix)
+- FEATURE: created web-install at http://www.cs.indiana.edu/cgi-pub/oleykin/
+- GUI: View tracks list and manage (i.e. delete, set visibility, terminate, cleanup short tracks)
+- BUG: in Cuboid.cpp and other obstacles IMPLEMENT_DYNAMIC was from Object3D not from obstacle, this prevented correct z-buffer generation
+- GUI:  add "terminate track" option to body right click menu
+- FEATURE: obstacle and other body intersect punishment: made them adjustable through the dialog
+- FEATURE: added tabbed views
+- FEATURE: display body ID's in body map of floor view
+- FIX: modify BodyPath data to delete pointers
+- FIX: app crashes when changing video file name -> safeRelease(pGraph) in destructor not in DeInitialize()!
+- API: Re-write bodymodel.body and body_deletec as CMap<int, Body*>
+- FEATURE: Add right mouse click menu to each ID box so that a user can manually correct misclassifications and broken tracks. 
+           For example, let's say that a shopper crosses paths with another shopper and NewVision accidentally switches their identities.  
+           The user could make the correction and NewVision would record this as a manually switched identity.   
+           Similarly, if a shopper walks behind a fixture and the computer creates two separate tracks, the user could manually link these into a single track 
+           and NewVision would record this error correction. Also, correcting errors can at the same time serve as validation!!!
+- FEATURE: User can manually flag employees and code other important information (e.g., gender: male/female, age category: child/teen/adult/elderly, buyer: yes/no; have an unknown category for all attributes).
+	       PATCH: Added "select" option in body tags dialog and don't save anything if it is selected
+- FEATURE: Application settings are loaded and stored in XML file. Can be adited through Settings dialog.
+- ENHANCE: Re-work NewVision ideology: three separate processes: tracking, heatmap, activity analysis and playback; 
+- ENHANCE: Change trackingdata from array to CMap 
+- ENHANCE: Re-work view information display using DC instead of IplImage (enhanced where available)
+- FEATURE: add TrackerModel::m_stopTime to stop the sequence automatically
+- FIX: CNewVisionDoc::OnStop()  reset Heatmaps and bodypaths on stop!!!
+- BUG: body_deleted array stores deleted bodies forever, must store only recently delted!
+   FIX: change BodyModel::UpdateRecentlyDeleted() to remove from array the bodies deleted earlier than
+- BUG: BodyActivityModel::ExportToCSV() some dwell times last until the end of sequence
+   FIX: Used Step::visible  paremeter in BodyPath::GetDwellLocations
+- FEATURE: Add "Goto frame" menu item (hot key Ctrl-G)
+- FEATURE: Add "Goto time" menu item (hot key Ctrl-T)
+- GUI: Display obstacles in Left View
+- GUI: TrackerModel::ShowTimeStamp() change display timestamp to show seconds
+- BUG: DisplayFloormap() crashes the app 
+  FIX: added invalid image file name checking
+- FEATURE: add "Interest region" DoorModel (the older one was "Interest Boundary")
+- ENHANCE: convert entire solution to MS Visual Studio 2005
+- FEATURE: create a dialog with an array of activities for swarm model 
+- FEATURE: create classes for group activity detection 
+- FEATURE: redesign activity model:
+  indivudial activity ******** invidual activity history BodyActivityModel -> Individual Activity Dialog
+  swarm activity      ******** swarm activity history SwarmActivityModel -> Swarm Activity Dialog
+- BUG: fix stream problems, including the track-bar
+   FIX: Use CAutoLock filterLock( &m_FilterCriticalSection ) in everything that works with the Stream (e.g. IMEdiaSeeking methods and TrackerModel::RunTracker)
+   FIX: Use CMediaControl::Pause instead of Stop! Use Stop only on exit or new project load.
+   FIX: For track bar update not the scroll position but the actual track number to avoid problems with rounding and getting stuck at the same position
+   FIX: Get current frame by calling pMediaSample->GetMediaTime() in ProxyTransform::Transform(IMediaSample *pMediaSample)
+- GUI: change source name label to edit box in TrackerDialog
+- GUI: display bodies outside interest region in different color in BodyModel::Draw();
+- BUG: empty bodies are not removed while working with the loaded paths SAME BUG: while saving to CVML/XML start time is the same as stop time
+   FIX: in TrackerModel::RunTracker() call ExportPathInfo() after tracking has been done (Predict() has been called)
+- BUG: fix Kalman .... fishy
+   FIX: seems to work correctly, but doesnt' help tracking (too much inertia); disabled for now
+- BUG: remove outsiders/invisible/dormants works incorrectly in BodyModel (does not remove all bodies)
+   FIX: remove from "body" array instead of "accepted" array
+- GUI: added blob tracking stage check button to ControlDialog
+- GUI: added right->draw histograms 
+- FEATURE: created BodyModel::DrawHistograms() to draw body histograms in hot/cold colors
+- BUG: if color hist defference penalty is set high => body won't move (color tracking)
+   FIX: added the use foreground blob mask in computing and updating color histogram
+- GUI: convert some GUI parameters measured in frames to seconds
+- GUI/DEBUG: create Debug tab for printing debug echos
+- BUG: suspect KalmanPredict and Move() move in the opposite direction in XY plane
+   FIX: CLEARED
+- BUG: TrackBar slider size is incorrect (on 8 sec clip you can scroll up to 4 sec only)
+   FIX: Changes page size in SROLLINFO structure in TrackerModel::Initialize()
+- GUI: added Body::drawHeight() and Blob::drawHeight()
+- GUI: added remove current button to CameraDialog dialog
+- GUI: added label explaining creation of Vanishing Points for CameraDialog dialog
+- ENHANCE: removed error message from FloorDialog::Initialize() if there is no image loaded
+- FEATURE: Installer: remove previous version (works only from control panel, why?), prompt to install .Net 1.1
+  FIX: Change "Product Code" in project setup properties but leave "Upgrade Code" unchanged
+- BUG: Sample Project.proj at the end cvEllipse() out of range VIOLATION
+   FIX: in DrawVerticalSphe	oid() z is higher than the camera: set start and stop to a full circle
+- BUG: CSV StopDateTime is the same for all (suspect invisible)
+- BUG: move bodies boes not seem to go smoothly and try to match the blob area; see the priors/likelihoods
+   FIX: proposed bodymodel prior was computed based on accepted instead of "body (original)" model
+- ENHANCE: change Obstacle::Draw to account for edges crossing the image border and reappearing on the other side
+  BUG: something more conceptual has to be done to deal with the singularity in spherical mode.
+- BUG: while exporting Bodies into body -pahts recently deleted bodies are also added but with the "visible" tag = false
+- FEATURE: export body path in form: ID, {##dwell period, dwell start time, dwell duration, fixture ID}
+- GUI: in ObstacleDialog add the capability to switch to floor view
+- GUI: create "Export to CSV" function for body paths; save group/dwell/fixture information
+- GUI: make "Enter" key work as "Apply" in preferences window
+- GUI: create an import/export into xml comparable to ground truth
+- GUI: Progress bar when opening XML paths
+- BUG: CameraModel::DrawVerticalSpheroid for perspective camera model is not quite correct
+   FIX: calculate angles for two pairs of tangent lines (see code)
+
+NewVision v0.1:
+---------------
+- write a tool for batch re-formatting of project files (every time I add a new serialized parameter I need this)
+   SOLUTION: Create a Windows macro in .ahk and .exe file
+- create a sample project!
+- create help file!
+- the program hands in Release mode....has something to do with CvMat and XVID format
+   SOLUTION: do not remove IsRunning() from SequenceProcessor::Run();
+- create UpdateRecentlyDeleted and ReplaceNewWithRecentlyDeleted
+- create IplImage* distanceMask; with the distance from each point at height mean_h/2 to the camera instead of CameraModel::computeScanlineWeight()
+- make m_distanceConfidence interval increase with the increasing distance from the camera
+- make CameraModel::computeScanlineWeight() give weights comparable to the body distance to the camera
+- CameraModel::computeScanlineWeight() for perspective camera model is not quite correct
+- is CameraModel::coordsDistanceFromCamera() right?
+- revise scanline weights to reflect the line proportion occupied by a body at average height
+- modify acceptance/rejection model to match ECCV paper
+   DIFFERENCE: cumulative prior is not a product, but rather an average of individual body priors. otherwise (is body prior is < 1) more bodies are disadvantaged 
+   in comparison to fewer bodies
+- use optical flow to : detect head rotations (predict position, interpret actions using motion templates)
+   RESULTS: NOT reliable, because head region is not detected accurately and flow vectors just give the derivative of the orientation, but there is no base component
+- how to update BG dynamically, yet without keeping the false body regions? (from the people standing two long at the same spot?)
+	SOLUTION: to remove bodies caused by static background region accumulation look at
+	(1) body position change (should be very little)
+	(2) body color histogram change (should be very little)
+  if this persists for some time (i.e 100 frames) => start update BG under the body and then remove the body
+- punish bodies for overlapping each other on the floor plan
+- create fBuffer = floor areas occupied by obstacles (punish bodies for moving into the floor obstacle areas)
+- split big blobs into two bodies of average height, vertically adjacent = some bodies are just not added around frame 7180 (from a large group)
+- use body_zbuffer everywhere (e.g. in Body::ComputeHistogram())
+- BUG: in DoorModel::GetDistanceFromClosestDoor() don't use the the [0,0,0] - [0,0,0] line (and if any point in line is close to [0,0,0]
+- need a second zbuffer for moving bodies Body::Likelyhood() works incorrectly because the obstacles are accounted for in z-buffer
+- make color tracking more reliable=> fixed some histogram related stuff in priors and likelyhoods
+- BUG: after "video file corrupt" message if clicking cancel, the application crashes
+- Third type of bgmodel imgThermal (mixed?) Pforeground = thermalintensity1 * distancefromcodebook2
+- BUG: in perspective projection view in coordsDistanceFromCamera() camera.z == p34 is less than zero!!!
+   SOLVED: camera is at [x = 0, y = 0, z = -P34]
+- BUG: in Body::UpdateHistogram() z-buffer is not used
+- compute BG probability map, i.e. use floating point foreground map and a mask with gaussian kernel for each body  
+- BUG: again in DrawVerticalSpheroid() fills a horizontal strip when y is somewhere in the middle (frame = 64925)
+   SOLVED: increase EPSILON from 0.00001 to 0.001
+- BUG: in DrawVerticalSpheroid() fills a horizontal strip when y is somewhere in the middle
+   SOLVED: used (D1 > - EPSILON) and abs(center.x) > EPSILON insted of absolute zeros to check for critical cases
+- create a Kalman based model for face orientation based on color, shape and body motion
+- BUG: in d2line()
+   SOLVED: created d2lineSegment which works differently than a distance to an infinite line
+- in Obsctale create a way of moving fixtures along X, Y or Z axes
+- create a interest zone door model
+- rewinding jumps back a certain amount of time
+- opening a new file doesn't clear check boxes in display menu but resets underlying variables
+- create SkinModel
+- Create a way to save and play back the tracking progress (use BodyPath as a start)
+- CHECK : incorporate static fixtures into z-buffer
+  // then we can use meanShift properly (the bottom part of the body would not be counted, as being occluded by the fixture)!
+- BUG: floor timestamp is shown in the input view
+- modify BoyPath::Draw to indicate dwell events with circles
+- move bodies with left mouse button
+- saving a paused stream, cancels tracking
+		SOLUTION: need not call Initialize in NewVisionDoc::OnSave()
+- BUG : track bar does not rewind 
+- BUG: doors in screen coordinates result in: blobs, further away from the camera are typically considered to be closer to the door !!!  
+		SOLUTION: compute distance to the doors in floor coordinates
+- add time stamp to the recorded frame
+- change likelyhood metric to treat close and far bodies equally 
+- look at the small bodies likelyhood gaussian masks; looks OK!
+- change DrawVerticalSpheroid() for fill == false (use lines on each side)
+- BUG: in DrawVerticalSpheroid in for ( int y = itop.y; y <= ibot.y; y++ )  boundaries are incorrect when it is right below the camera
+   SOLUTION: used precise angle boundaries (see calculations of ellipse tangents on paper)
+- added uniform variation of DoorModel
+- BUG -  CameraModel::coordsImage2Spheric(CvPoint2D32f p)
+    // returns lattitude and longtitude [phi, theta] in spherical coordinates from [x,y] - pixel location
+	// BUG 1: what if image height != 256 
+	// BUG 2: y = h should map to PI!!!! NOT LESS!
+- BUG: in computing tangents of cone and spheroid -> center.x is zero sometimes too (division occurs by center.x); 
+	SOLUTION: in this case solve through for x first (involves division by center.y)
+	          if center.y is zero too then draw a full scanline
+- BUG: DrawVerticalSpheroid sometimes draws a full horizontal line where it shouldn't (D1 < 0) case. 
+	SOLVED: Due to the discretization at the top and bottom edges of spheroid D1 can be actually less than zero (i.e. the cone does not touch the spheroid)	
+- DrawVerticalSpheroid in misbehaves extreeme positions under the cameera
+- decided not to use MeanShift, but re-wrote HistogramCompute! re-write MeanShift and HistogramCompute using 3D spheroid projections
+- add labels for obstacles
+- menu items for play, record, pause and stop. 
+- create quicklaunch icon in setup
+- re-work tabs to be a tree property sheet
+- re-work body model to exclude any camera model dependent calls
+- fixed a bug in coordsImage2Real() for SPHERICAL model
+- in SPHERICAL model ellipsoids do not project as ellipses into the image, change Body::Rasterize() to account for both models  
+- lines are not always perpendicular in the obstacle builder; m_uncropped was unnecessary, instead used 2*h
+- depict paths as line segmets with dwelling locations as circles
+- create an Alarm recording scheduler class
+- create an ObstacleModel to draw paralellograms on the image with the mouse
+- use real BB floormap!
+- display floor plan w/ heat map
+- create separate floor model image in left-lower corner; must have it's own size; display all floor-coordinate outputs there
+- indicate sales reps by color histograms
+- generate heat maps on the right
+- add bg subtraction age to the dialog!
+- work on comparing paths using weighted 2D correlation (for shopping groups)
+- add a possible mutation: split body in two if if does not cover the blob!  
+- work on floor plan and traveling path:
+- smooth the trajectories
+- SetHeight() creates negative body width => set width to height*WIDTH_RATIO
+- blobs further away are less likely to get a body assigned (is due to poor calibration)
+  solution: resize intitial candidates to mean size if too big/small
+- !!! This is incorporated in punnishments for excessive blobs !!!
+  make sure that each blob is at least parially covered by one body
+  (penalize for uncoveredblobpixels == blobpixels )
+- decrease id if model was rejected
+- contain memory usage growth
+- get an array of points in efficient way (major bottleneck!!) in Body::ComputeHistogram
+- use ROI where possible in the images
+- draw flat XY movements map in the output image
+- create door model and compute add/remove priors based on the door proximity
+- modify BG subtraction to exclude existing bodies
+
+
+

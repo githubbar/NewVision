@@ -1,0 +1,4 @@
+base referer
+rect $class_i_cluster.html 8,197 136,469
+rect $class_swarm_event.html 160,181 365,485
+rect $class_swarm_activity.html 5,533 139,805

@@ -1,0 +1,4 @@
+base referer
+rect $class_floor_model.html 5,152 152,488
+rect $class_model.html 36,5 121,101
+rect $class_c_floor_control.html 176,208 317,432

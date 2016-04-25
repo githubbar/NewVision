@@ -1,0 +1,7 @@
+- use rectangles instead of ellipses (speed up significantly, allowing for more mutations)
+- need third BG model, with manually picked time and space region
+- if two bodies are traveling too close for too long => overcompensation of the blob => delelte one body
+- AmEagle Perspectives:
+  = use door trackers info => improve tracking quality
+  = use 3D model from Steve => improve tracking quality
+  

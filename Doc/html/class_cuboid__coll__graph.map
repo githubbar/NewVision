@@ -1,0 +1,3 @@
+base referer
+rect $class_obstacle.html 65,453 140,533
+rect $class_object3_d.html 5,5 200,405

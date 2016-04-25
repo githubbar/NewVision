@@ -1,0 +1,5 @@
+base referer
+rect $class_background_dialog.html 5,741 211,965
+rect $class_c_b_g_dialog.html 235,741 440,965
+rect $class_c_array.html 77,13 227,93
+rect $class_model.html 251,5 336,101

@@ -1,0 +1,6 @@
+base referer
+rect $_camera_dialog_8h.html 588,5 1116,32
+rect $_body_8cpp.html 609,56 1095,83
+rect $_camera_model_8cpp.html 583,107 1121,133
+rect $_cuboid_8cpp.html 603,157 1101,184
+rect $_cylinder_8cpp.html 600,208 1104,235

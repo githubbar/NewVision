@@ -1,0 +1,8 @@
+base referer
+rect $_std_afx_8h.html 584,5 656,32
+rect $_new_vision_8h.html 572,56 668,83
+rect $_new_vision_doc_8h.html 560,107 680,133
+rect $_cylinder_8h.html 579,157 661,184
+rect $_camera_model_8h.html 563,208 677,235
+rect $_floor_model_8h.html 571,259 669,285
+rect $_globals_8h.html 581,309 659,336

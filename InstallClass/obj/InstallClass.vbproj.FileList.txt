@@ -1,0 +1,13 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\InstallClass.InstallClass.resources
+obj\Debug\InstallClass.vbproj.GenerateResource.Cache
+obj\Debug\InstallClass.dll
+obj\Debug\InstallClass.xml
+obj\Debug\InstallClass.pdb
+bin\InstallClass.dll
+bin\InstallClass.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\InstallClass.InstallClass.resources
+obj\Release\InstallClass.vbproj.GenerateResource.Cache
+obj\Release\InstallClass.dll
+obj\Release\InstallClass.xml

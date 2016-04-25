@@ -1,0 +1,10 @@
+base referer
+rect $class_c_tab_page_s_s_l.html 7,56 116,83
+rect $class_body_dialog_1_1_body_priors_tab.html 173,5 360,32
+rect $class_body_dialog_1_1_body_tracking_tab.html 165,56 368,83
+rect $class_swarm_event_detector.html 193,107 340,133
+rect $class_co_dwelling_event_detector.html 432,5 605,32
+rect $class_grouping_event_detector.html 439,56 599,83
+rect $class_leader_following_event_detector.html 417,107 620,133
+rect $class_lining_up_event_detector.html 440,157 597,184
+rect $class_proximity_event_detector.html 437,208 600,235

@@ -1,0 +1,5 @@
+base referer
+rect $class_i_node.html 7,31 63,57
+rect $class_i_cluster.html 128,5 195,32
+rect $class_swarm_event.html 112,56 211,83
+rect $class_swarm_activity.html 259,5 365,32

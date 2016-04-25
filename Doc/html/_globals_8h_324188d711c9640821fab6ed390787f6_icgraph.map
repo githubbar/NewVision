@@ -1,0 +1,6 @@
+base referer
+rect $class_cuboid.html#2547b7f9e8f6980f7851be78efd37a41 213,5 347,32
+rect $class_cylinder.html#744bf9f5b925897951b6a778e973125c 211,56 349,83
+rect $class_cuboid.html#149ea7d9780e7a7467b4e3a1d8bea61d 209,107 351,133
+rect $class_cylinder.html#cea83435fd42868740011bf02a03e8b1 207,157 353,184
+rect $class_c_obstacle_control.html#d0d1b7e6c2109a7313567708fddd51f0 184,208 376,235

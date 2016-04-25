@@ -1,0 +1,8 @@
+base referer
+rect $_std_afx_8h.html 625,5 695,32
+rect $_new_vision_doc_8h.html 600,56 720,83
+rect $_obstacle_dialog_8h.html 769,81 892,108
+rect $_globals_8h.html 621,157 699,184
+rect $_object3_d_8h.html 787,259 875,285
+rect $_cuboid_8h.html 623,259 697,285
+rect $_cylinder_8h.html 619,309 701,336

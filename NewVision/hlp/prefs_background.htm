@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Background Model</TITLE>
+</HEAD>
+
+<BODY>
+
+
+<P><A NAME="afx_hidd_background_model"></A><B>Background Model</B></P>  
+
+<P>First major step NewVision performs to identify moving objects is "Background Subtraction". The tracker records a history of pixel colors for each x,y location in the image - a so called <STRONG>background model</STRONG> - and then uses it to judge if current pixel was there before or it is a result of a new object (person) moving through the scene. This dialog controls various parameters of how "background model" is accumulated and used for this process.</P>
+
+<P>
+<img src="Images/background_model.png">
+</P>
+<P>
+<H4>1. Chromaticity distortion threshold</H4>
+How much pixel's color should be different from the historical record to be considered as belonging to a moving object. Increase this value if you are getting too much noise at the "blob" level, decrease - if parts of moving bodies are not marked as "blobs".<BR>
+<STRONG>Default setting:</STRONG> 12
+</P> 
+
+<P>
+<H4>2. Minimum brightness distortion </H4>
+How much darker pixel should be to be considered as belonging to a moving object. Example: 0.7 means that a pixel must be darker than 70% of the observed historical value. <BR>
+<STRONG>Default setting:</STRONG> 0.8
+</P>  
+
+<P>
+<H4>3. Maximum brightness distortion </H4>
+How much lighter pixel should be to be considered as belonging to a moving object. Example: 1.1 means that a pixel must be lighter than 110% of the observed historical value. <BR>
+<STRONG>Default setting:</STRONG> 1.2
+</P>  
+
+<P>
+<H4>4. Learn background</H4>
+Specify background learning mode:
+<UL>
+<LI>Select "Use learning phase" to accumulate background information for a fixed number of frames and perform tracking after. 
+<P>
+<img src="Images/background_model_static.png">
+</P>  
+In this mode you can specify the number of the last frame to be used for background training. Example: if this value is set to 100 and offset in Input Model is 50, then New Vision will accumulate background between frames 50 and 100 and start tracking from frame 101<BR>
+<LI>Select "Acquire dynamically" to perform background histrory accumulation along with tracking. <BR>
+<P>
+<img src="Images/background_model_dynamic.png">
+</P>  
+In this mode you can specify when to start tracking in terms of how "mature" the background model is. Example: 30% of the pixel values have occurred at least 20 times.
+</UL>
+<STRONG>Default setting:</STRONG> Use learning phase
+</P>
+
+<P>
+<H4>5. Erode </H4>	
+Check this box if you want to perfrom a morphological erosion operation on the resulting foreground image. This is useful to remove small (single-pixel) foreground noise pixels. Increase kernel size to remove larger noise areas.<BR>
+<STRONG>Default setting:</STRONG> On : 2
+</P>  
+
+<P>
+<H4>6. Dilate</H4>	
+Check this box if you want to perfrom a morphological dilation operation on the resulting foreground image. This is useful to bridge small (single-pixel) foreground gaps. Increase kernel size to bridge larger gaps.<BR>
+<STRONG>Default setting:</STRONG> On : 3
+</P>  
+  
+<P>
+<H4>7. Stale if didn't appear for ...</H4>
+Background training process periodically removes "stale" pixels, that is the values that have not appeared in the scene for some time. For instance if a moving person was in the scene during background accumulation stage a certain pixel at location x=50, y=120 will take the color of person's clothing. This pixel will be added to the background model, but likely will not appear in the near future. By setting this value to a relatively large number, (e.g.. 1000 ~ 30 seconds and 30 fps) you guarantee that only values reoccurring at least every 30 seconds will be considered as part of the background.<BR>
+<STRONG>Default setting:</STRONG> 100
+</P>  
+ 
+<P>
+<H4>8. Remove stale every </H4>
+Background training process periodically removes "stale" pixels, that is the values that have not appeared in the scene for some time. For instance if a moving person was in the scene during background accumulation stage a certain pixel at location x=50, y=120 will take the color of person's clothing. This pixel will be added to the background model, but likely will not appear in the near future. This value controls the frequency of "stale" values cleanup process<BR>
+<STRONG>Default setting:</STRONG> 100
+</P>  
+
+<P>
+<H4>9. BG pixel, if older than</H4>
+Only pixel values that are older (i.e. appeared in more frames) than this value will be considered as part of the background.<BR>
+<STRONG>Default setting:</STRONG> 5
+</P>  
+
+<P>
+<H4>10. Update every</H4>
+Specify how often background model should be updated. For example set this value to 2 to update every other frame or to 10 to update every 10th frame.<BR>
+<STRONG>Default setting:</STRONG> 10
+</P>   
+
+</BODY>
+</HTML>

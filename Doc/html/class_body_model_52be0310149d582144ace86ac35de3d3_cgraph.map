@@ -1,0 +1,5 @@
+base referer
+rect $class_body.html#9c3502d08c2544ffbce16ef10623d96f 297,5 444,32
+rect $class_door_model.html#808f4b1639b6972438d3db90298e4545 257,56 484,83
+rect $class_body_map.html#3a06106c08f18a16c32114aa5319c360 292,107 449,133
+rect $class_camera_model.html#49d6322d38166628c966a915d9cad370 535,5 759,32

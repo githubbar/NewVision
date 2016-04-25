@@ -1,0 +1,6 @@
+PATH: {BodyID, StartTime, StartLocation, EndTime, EndLocation, EndedInStore? }
+----
+
+
+{DwellPeriodNumber, DwellStartTime, DwellEndTime, FixtureID}
+
